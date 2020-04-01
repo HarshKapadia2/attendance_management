@@ -47,6 +47,7 @@
    - Register the web app in the project to get this snippet.
 - Add the key snippet from the project in theFirebase console to `key.json`.
    - The key snippet is the generated private key file of the `Python` Firebase Admin SDK found in `Project Settings/Service Accounts`.
+- Add a random string to `app.secret_key` variable at the start of the `app.py` file.
 - Enable Cloud Firestore and e-mail-password auth for the project in Firebase.
 - To run the website `python app.py`.
 
