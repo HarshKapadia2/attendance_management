@@ -39,12 +39,13 @@
    - Run this command after creating a virtual environment.
    
 ## Run Instructions
-- Download the above code base (or `clone` it using Git).
+- Download the above code base ([or `clone` it using Git](https://github.com/HarshKapadia2/git_basics)).
 - Create a virtual environment using `virtualenv <environment_name>`.
 - Run `pip install flask firebase-admin pyrebase`.
-- Create a new project in your Firebase console.
+- Create a new project in your [Firebase console](https://console.firebase.google.com/).
 - Add the config snippet from the project in the Firebase console to `app.py` and `templates/base.html`.
-   - Register your web app in the project to get this snippet.
+   - Register the web app in the project to get this snippet.
 - Add the key snippet from the project in theFirebase console to `key.json`.
+   - The key snippet is the generated private key file of the `Python` Firebase Admin SDK found in `Project Settings/Service Accounts`.
 - Enable Cloud Firestore and e-mail-password auth for the project in Firebase.
 - To run the website `python app.py`.
