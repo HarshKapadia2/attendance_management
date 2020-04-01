@@ -17,13 +17,18 @@
       - Attendance percentage
       
 ## Technologies Used
-- Backend
+- Back end
    - Flask
 - DB and Auth
    - Firebase
       - Cloud Firestore
       - e-mail-password authentication
-      
+- Front end
+   - Templates from [Creative Tim](https://www.creative-tim.com/) Material Kit PRO - v2.2.0
+      - HTML
+      - CSS
+      - JS
+
 ## Requirements
 - [Python 3](https://www.python.org/) (Enable/add Python to path)
 - pip (comes bundled with Python 3)
