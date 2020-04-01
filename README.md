@@ -34,14 +34,14 @@
 - pip (comes bundled with Python 3)
 - virtualenv (`pip install virtualenv`)
 - Packages
-   - `pip install flask firebase-admin pyrebase`
+   - `pip install flask firebase-admin pyrebase gunicorn` or `pip install -r requirements.txt`.
    - Refer to `requirements.txt` for more information on packages.
    - Run this command after creating a virtual environment.
    
 ## Run Instructions
 - Download the above code base ([or `clone` it using Git](https://github.com/HarshKapadia2/git_basics)).
 - Create a virtual environment using `virtualenv <environment_name>`.
-- Run `pip install flask firebase-admin pyrebase`.
+- Run `pip install flask firebase-admin pyrebase gunicorn` or `pip install -r requirements.txt`.
 - Create a new project in your [Firebase console](https://console.firebase.google.com/).
 - Add the config snippet from the project in the Firebase console to `app.py` and `templates/base.html`.
    - Register the web app in the project to get this snippet.
