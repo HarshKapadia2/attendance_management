@@ -39,7 +39,7 @@
    - Run this command after creating a virtual environment.
    
 ## Run Instructions
-- Download the above code base ([or `clone` it using Git](https://github.com/HarshKapadia2/git_basics)).
+- Download the above code base ([or `clone` it using Git](https://github.com/HarshKapadia2/git_basics#basic-git-commands)).
 - Create a virtual environment using `virtualenv <environment_name>`.
 - Run `pip install flask firebase-admin pyrebase gunicorn` or `pip install -r requirements.txt`.
 - Create a new project in your [Firebase console](https://console.firebase.google.com/).
