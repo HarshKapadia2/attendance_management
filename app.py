@@ -17,14 +17,14 @@ db = firestore.client()
 # pyrebase init
 # Your web app's Firebase configuration
 firebaseConfig = {
-    'apiKey': '',
-    'authDomain': '',
-    'databaseURL': '',
-    'projectId': '',
-    'storageBucket': '',
-    'messagingSenderId': '',
-    'appId': '',
-    'measurementId': ''
+    'apiKey': "",
+    'authDomain': "",
+    'databaseURL': "",
+    'projectId': "",
+    'storageBucket': "",
+    'messagingSenderId': "",
+    'appId': "",
+    'measurementId': ""
 }
 firebase = pyrebase.initialize_app(firebaseConfig)
 auth = firebase.auth()
@@ -61,7 +61,7 @@ def teacher_login():
         division = request.form['division'].upper()
 
         # check e-mail, div & pass
-        flag_1 = flag_2 = flag_3 = False
+        flag_1 = flag_2 = flag_3 = flag_4 = False
         div_ref = db.collection('division')
         divs = div_ref.stream()
         # check for div existence
@@ -77,13 +77,17 @@ def teacher_login():
                         try:
                             auth.sign_in_with_email_and_password(email, password)
                             flag_3 = True
+                            # e-mail verification check
+                            acc_info = auth.get_account_info(st_user['idToken'])
+                            if acc_info['users'][0]['emailVerified'] == True:
+                                flag_4 = True
                         except:
                             flag_3 = False
                         break
                 break
         
-        if flag_1 == False or flag_2 == False or flag_3 == False:
-            flash('Incorrect or non-existent e-mail, division or password...', 'error')
+        if flag_1 == False or flag_2 == False or flag_3 == False or flag_4 == False:
+            flash('Incorrect, unverified or non-existent e-mail, division or password...', 'error')
             return redirect('/teacher_login')
     
         session['division'] = division
@@ -127,7 +131,9 @@ def teacher_signup():
             return redirect('/teacher_signup')
         
         # auth user
-        auth.create_user_with_email_and_password(email, password)
+        teacher_user = auth.create_user_with_email_and_password(email, password)
+        # e-mail verification
+        auth.send_email_verification(teacher_user['idToken'])
         # add teacher to db
         db.collection('teacher').document(email).set({
             'name': name,
@@ -146,7 +152,7 @@ def teacher_signup():
             'teacher_email': firestore.ArrayUnion([email])
         })
 
-        flash('Registration Successful! You can now log in...', 'info')
+        flash('Registration successful! Please check your e-mail for verification and then log in...', 'info')
         return redirect('/teacher_login')
 
 
@@ -254,7 +260,7 @@ def student_login():
         division = request.form['division'].upper()
 
         # check e-mail, div & pass
-        flag_1 = flag_2 = flag_3 = False
+        flag_1 = flag_2 = flag_3 = flag_4 = False
         div_ref = db.collection('division')
         divs = div_ref.stream()
         # check for div existence
@@ -268,15 +274,19 @@ def student_login():
                         flag_2 = True
                         # check pass
                         try:
-                            auth.sign_in_with_email_and_password(email, password)
+                            st_user = auth.sign_in_with_email_and_password(email, password)
                             flag_3 = True
+                            # e-mail verification check
+                            acc_info = auth.get_account_info(st_user['idToken'])
+                            if acc_info['users'][0]['emailVerified'] == True:
+                                flag_4 = True
                         except:
                             flag_3 = False
                         break
                 break
-        
-        if flag_1 == False or flag_2 == False or flag_3 == False:
-            flash('Incorrect or non-existent e-mail, division or password...', 'error')
+
+        if flag_1 == False or flag_2 == False or flag_3 == False or flag_4 == False:
+            flash('Incorrect, unverified or non-existent e-mail, division or password...', 'error')
             return redirect('/student_login')
 
         session['division'] = division
@@ -324,7 +334,9 @@ def student_signup():
             return redirect('/student_signup')
 
         # auth user
-        auth.create_user_with_email_and_password(email, password)
+        st_user = auth.create_user_with_email_and_password(email, password)
+        # e-mail verification
+        auth.send_email_verification(st_user['idToken'])
         # check for div
         db.collection('division').document(division).set({
             'year': year,
@@ -336,7 +348,7 @@ def student_signup():
             'roll_no': roll_no,
         })
         
-        flash('Registration Successful! You can now log in...', 'info')
+        flash('Registration successful! Please check your e-mail for verification and then log in...', 'info')
         return redirect('/student_login')
 
 
@@ -398,6 +410,22 @@ def logout():
         return redirect('/')
     else:
         return redirect('/')
+
+
+
+@app.route('/forgot_password', methods = ['GET', 'POST'])
+def forgotPassword():
+    if request.method == 'GET':
+        if 'user' not in session:
+            return render_template('forgot_password_page.html')
+        else:
+            return redirect('/logout')
+    elif request.method == 'POST':
+        email = request.form['email']
+        auth.send_password_reset_email(email)
+        flash('Check your e-mail to set new password...', 'info')
+        return redirect('/')
+
 
 
 
