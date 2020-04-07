@@ -1,5 +1,16 @@
-# attendance-management
-- A website for teachers and students.
+# ***Attendance Management***
+<p align="center">
+   <a href="https://attendance-management-flask.herokuapp.com/"><b>https://attendance-management-flask.herokuapp.com/</b></a>
+   <br />
+   <br />
+   <a href="#contributing"><img alt="Contributions Welcome" src="https://img.shields.io/badge/contributions-welcome-brightgreen?style=flat-square"></a>
+   <img alt="GitHub License MIT" src="https://img.shields.io/github/license/saurabhdaware/text-to-handwriting?style=flat-square">
+   <br />
+   <br />
+   A website for teachers and students.
+</p>
+
+## ***Functionalities***
 - Teacher's functionalities
    - Give attendance to all students as per entered date.
    - On the dashboard, see the number of lectures conducted (by the teacher) and all students in the division in a table with their
@@ -16,7 +27,7 @@
       - Number of lectures conducted by the teacher
       - Attendance percentage
       
-## Technologies Used
+## ***Technologies Used***
 - Back end
    - Flask
 - DB and Auth
@@ -29,7 +40,7 @@
       - CSS
       - JS
 
-## Requirements
+## ***Requirements***
 - [Python 3](https://www.python.org/) (Enable/add Python to path)
 - pip (comes bundled with Python 3)
 - virtualenv (`pip install virtualenv`)
@@ -38,7 +49,7 @@
    - Refer to `requirements.txt` for more information on packages.
    - Run this command after creating a virtual environment.
    
-## Run Instructions
+## ***Run Instructions***
 - Download the above code base ([or `clone` it using Git](https://github.com/HarshKapadia2/git_basics#basic-git-commands)).
 - Create a virtual environment using `virtualenv <environment_name>`.
 - Run `pip install flask firebase-admin pyrebase gunicorn` or `pip install -r requirements.txt`.
@@ -51,6 +62,9 @@
 - Enable Cloud Firestore and e-mail-password auth for the project in Firebase.
 - To run the website `python app.py`.
 
-## Creators
-- [Harsh Kapadia](https://www.linkedin.com/in/harsh-kapadia-426999175/)
-- [Saikiran Jakkan](https://www.linkedin.com/in/saikiran-jakkan-939b2a190/)
+## ***Creators***
+- Harsh Kapadia
+   - [LinkedIn](https://www.linkedin.com/in/harsh-kapadia-426999175/)
+   - [Twitter](https://twitter.com/harshgkapadia)
+- Saikiran Jakkan
+   - [LinkedIn](https://www.linkedin.com/in/saikiran-jakkan-939b2a190/)
