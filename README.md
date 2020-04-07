@@ -7,7 +7,7 @@
    <img alt="GitHub License MIT" src="https://img.shields.io/github/license/saurabhdaware/text-to-handwriting?style=flat-square">
    <br />
    <br />
-   A website for teachers and students.
+   <b>A web app for teachers and students.</b>
 </p>
 
 ## ***Functionalities***
