@@ -52,6 +52,7 @@
 ## ***Run Instructions***
 - Download the above code base ([or `clone` it using Git](https://github.com/HarshKapadia2/git_basics#basic-git-commands)).
 - Create a virtual environment using `virtualenv <environment_name>`.
+- [Activate the virtual environment (scroll down for different terminals)](https://docs.python.org/3/library/venv.html#creating-virtual-environments) & keep it activated whenever you're working on/using this project.
 - Run `pip install flask firebase-admin pyrebase gunicorn` or `pip install -r requirements.txt`.
 - Create a new project in your [Firebase console](https://console.firebase.google.com/).
 - Add the config snippet from the project in the Firebase console to `app.py` and `templates/base.html`.
@@ -60,7 +61,7 @@
    - The key snippet is the generated private key file of the `Python` Firebase Admin SDK found in `Project Settings/Service Accounts`.
 - Add a random string to `app.secret_key` variable at the start of the `app.py` file.
 - Enable Cloud Firestore and e-mail-password auth for the project in Firebase.
-- To run the website `python app.py`.
+- To run the website: `python app.py`.
 
 ## ***Creators***
 - Harsh Kapadia
