@@ -75,10 +75,10 @@ def teacher_login():
                         flag_2 = True
                         # check pass
                         try:
-                            auth.sign_in_with_email_and_password(email, password)
+                            teacher_user = auth.sign_in_with_email_and_password(email, password)
                             flag_3 = True
                             # e-mail verification check
-                            acc_info = auth.get_account_info(st_user['idToken'])
+                            acc_info = auth.get_account_info(teacher_user['idToken'])
                             if acc_info['users'][0]['emailVerified'] == True:
                                 flag_4 = True
                         except:
