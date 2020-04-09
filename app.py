@@ -76,6 +76,7 @@ def teacher_login():
                         # check pass
                         try:
                             teacher_user = auth.sign_in_with_email_and_password(email, password)
+                            # print(teacher_user) # get back details
                             flag_3 = True
                             # e-mail verification check
                             acc_info = auth.get_account_info(teacher_user['idToken'])
@@ -115,12 +116,6 @@ def teacher_signup():
         password = request.form['password']
         password2 = request.form['password2']
 
-        # check for same e-mail
-        teachers = db.collection('teacher').stream()
-        for teacher in teachers:
-            if teacher.id == email:
-                flash('That e-mail is already registered...', 'error')
-                return redirect('/teacher_signup')
         # check if passwords match
         if password != password2:
             flash('The passwords do not match...', 'error')
@@ -131,7 +126,11 @@ def teacher_signup():
             return redirect('/teacher_signup')
         
         # auth user
-        teacher_user = auth.create_user_with_email_and_password(email, password)
+        try:
+            teacher_user = auth.create_user_with_email_and_password(email, password)
+        except:
+            flash('This e-mail has already been registered. Please use another e-mail...', 'error')
+            return redirect('/teacher_signup')
         # e-mail verification
         auth.send_email_verification(teacher_user['idToken'])
         # add teacher to db
@@ -314,12 +313,9 @@ def student_signup():
         password = request.form['password']
         password2 = request.form['password2']
 
-        # check for same e-mail and roll no.
+        # check for same roll no.
         students = db.collection('division').document(division).collection('student').stream()
         for student in students:
-            if student.id == email:
-                flash('That e-mail is already registered...', 'error')
-                return redirect('/student_signup')
             st_dict = student.to_dict()
             if st_dict['roll_no'] == roll_no:
                 flash(f'Roll no. {roll_no} is already registered for {division}...', 'error')
@@ -334,7 +330,11 @@ def student_signup():
             return redirect('/student_signup')
 
         # auth user
-        st_user = auth.create_user_with_email_and_password(email, password)
+        try:
+            st_user = auth.create_user_with_email_and_password(email, password)
+        except:
+            flash('This e-mail has already been registered. Please use another e-mail...', 'error')
+            return redirect('/teacher_signup')
         # e-mail verification
         auth.send_email_verification(st_user['idToken'])
         # check for div
