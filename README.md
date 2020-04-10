@@ -62,6 +62,7 @@
 - Add a random string to `app.secret_key` variable at the start of the `app.py` file.
 - Enable Cloud Firestore and e-mail-password auth for the project in Firebase.
 - To run the website: `python app.py`.
+- To view running website: default: `localhost:5000` or `127.0.0.1:5000`
 
 ## ***Creators***
 - Harsh Kapadia
