@@ -30,28 +30,13 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='css/material-kit.css') }}" />
 
   <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
 
   <!-- TODO: Add SDKs for Firebase products that you want to use
       https://firebase.google.com/docs/web/setup#available-libraries -->
-  <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-analytics.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/7.12.0/firebase-analytics.js"></script>
 
-  <script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-      apiKey: "",
-      authDomain: "",
-      databaseURL: "",
-      projectId: "",
-      storageBucket: "",
-      messagingSenderId: "",
-      appId: "",
-      measurementId: ""
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
-  </script>
+  <script defer src="{{ url_for('static', filename='js/firebaseConfig.js') }}"></script>
 </head>
 
 {% block body %}{% endblock %}
@@ -67,22 +52,16 @@
   </footer>
 
   <!--   Core JS Files   -->
-  <script type="text/javascript" src="{{ url_for('static', filename='js/core/jquery.min.js') }}"></script>
-  <script type="text/javascript" src="{{ url_for('static', filename='js/core/popper.min.js') }}"></script>
-  <script type="text/javascript" src="{{ url_for('static', filename='js/core/bootstrap-material-design.min.js') }}"></script>
-  <script type="text/javascript" src="{{ url_for('static', filename='js/plugins/moment.min.js') }}"></script>
+  <script defer type="text/javascript" src="{{ url_for('static', filename='js/core/jquery.min.js') }}"></script>
+  <script defer type="text/javascript" src="{{ url_for('static', filename='js/core/popper.min.js') }}"></script>
+  <script defer type="text/javascript" src="{{ url_for('static', filename='js/core/bootstrap-material-design.min.js') }}"></script>
+  <script defer type="text/javascript" src="{{ url_for('static', filename='js/plugins/moment.min.js') }}"></script>
   <!--	Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
-  <script type="text/javascript" src="{{ url_for('static', filename='js/plugins/bootstrap-datetimepicker.js') }}"></script>
-  <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
-  <script type="text/javascript" src="{{ url_for('static', filename='js/plugins/nouislider.min.js') }}"></script>
-  <!--	Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
-  <script type="text/javascript" src="{{ url_for('static', filename='js/plugins/bootstrap-tagsinput.js') }}"></script>
-  <!--	Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
-  <script type="text/javascript" src="{{ url_for('static', filename='js/plugins/bootstrap-selectpicker.js') }}"></script>
+  <script async type="text/javascript" src="{{ url_for('static', filename='js/plugins/bootstrap-datetimepicker.js') }}"></script>
   <!-- Place this tag in your head or just before your close body tag. -->
-  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <script async src="https://buttons.github.io/buttons.js"></script>
   <!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
-  <script type="text/javascript" src="{{ url_for('static', filename='js/material-kit.js') }}"></script>
+  <script async type="text/javascript" src="{{ url_for('static', filename='js/material-kit.js') }}"></script>
 </body>
 
 </html>
