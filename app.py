@@ -206,7 +206,14 @@ def add_edit_lecture():
             teacher_details = db.collection('teacher').document(session['user']).get()
             # get students
             students = db.collection('division').document(session['division']).collection('student').order_by('roll_no').stream()
+            count = 0
+            for student in students:
+                count += 1
+            if count == 0:
+                flash('No students in division to add lecture...', 'info')
+                return redirect('/teacher_dashboard')
             
+            students = db.collection('division').document(session['division']).collection('student').order_by('roll_no').stream()
             return render_template('add_edit_lecture_page.html', students = students, teacher_details = teacher_details.to_dict())
         else:
             return redirect('/logout')
@@ -225,7 +232,8 @@ def add_edit_lecture():
         
         lec_doc_ref = db.collection('teacher').document(session['user']).collection('lecture').document()
         lec_doc_ref.set({
-            'date': date
+            'date': date,
+            'student_email': []
         })
         
         for student_email in student_emails:
@@ -360,30 +368,31 @@ def student_dashboard():
         div_ref = db.collection('division').document(session['division'])
         div_details = div_ref.get().to_dict()
         student_details = div_ref.collection('student').document(session['user']).get()
-        # get subject data
         attendance = {}
-        for teacher_email in div_details['teacher_email']:
-            teacher_ref = db.collection('teacher').document(teacher_email)
-            lec_ref = teacher_ref.collection('lecture')
-            teacher_details = teacher_ref.get().to_dict()
-            lectures = lec_ref.stream()
-            # conducted lec count & attendance calculation logic
-            lec_conducted_count = 0
-            lec_attended_count = 0
-            for lecture in lectures:
-                lec_conducted_count += 1
-                lec_dict = lecture.to_dict()
-                if session['user'] in lec_dict['student_email']:
-                    lec_attended_count += 1
+        if 'teacher_email' in div_details:
+            # get subject data
+            for teacher_email in div_details['teacher_email']:
+                teacher_ref = db.collection('teacher').document(teacher_email)
+                lec_ref = teacher_ref.collection('lecture')
+                teacher_details = teacher_ref.get().to_dict()
+                lectures = lec_ref.stream()
+                # conducted lec count & attendance calculation logic
+                lec_conducted_count = 0
+                lec_attended_count = 0
+                for lecture in lectures:
+                    lec_conducted_count += 1
+                    lec_dict = lecture.to_dict()
+                    if session['user'] in lec_dict['student_email']:
+                        lec_attended_count += 1
+                    lectures = lec_ref.stream() # needs to be streamed again after every use, reason unkonwn
+                
+                if lec_conducted_count != 0:
+                    percentage = int((lec_attended_count/lec_conducted_count)*100)
+                else:
+                    percentage = 0
+                
+                attendance[teacher_email] = [teacher_details['subject'], teacher_details['name'], lec_attended_count, lec_conducted_count, percentage]
                 lectures = lec_ref.stream() # needs to be streamed again after every use, reason unkonwn
-            
-            if lec_conducted_count != 0:
-                percentage = int((lec_attended_count/lec_conducted_count)*100)
-            else:
-                percentage = 0
-            
-            attendance[teacher_email] = [teacher_details['subject'], teacher_details['name'], lec_attended_count, lec_conducted_count, percentage]
-            lectures = lec_ref.stream() # needs to be streamed again after every use, reason unkonwn
         
         div_details = div_ref.get().to_dict() # needs to be streamed again after every use, reason unkonwn
         return render_template('student_dashboard_page.html', student_details = student_details.to_dict(), div_details = div_details, division = session['division'], attendance = attendance)
