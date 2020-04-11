@@ -4,7 +4,7 @@
    <br />
    <br />
    <a href="#contributing"><img alt="Contributions Welcome" src="https://img.shields.io/badge/contributions-welcome-brightgreen?style=flat-square"></a>
-   <img alt="GitHub License MIT" src="https://img.shields.io/github/license/saurabhdaware/text-to-handwriting?style=flat-square">
+   <img alt="Git MIT license" src="https://img.shields.io/github/license/HarshKapadia2/git_basics?style=flat-square">
    <br />
    <br />
    <b>A web app for teachers and students.</b>
