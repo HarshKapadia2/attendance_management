@@ -422,7 +422,11 @@ def forgotPassword():
             return redirect('/logout')
     elif request.method == 'POST':
         email = request.form['email']
-        auth.send_password_reset_email(email)
+        try:
+            auth.send_password_reset_email(email)
+        except:
+            flash('That e-mail ID is not registered...', 'error')
+            return redirect('/')
         flash('Check your e-mail to set new password...', 'info')
         return redirect('/')
 
