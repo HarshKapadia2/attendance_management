@@ -4,6 +4,8 @@
 
 - **Beginner contributors** can find issues to be fixed under the `good first issue` label in the [issues](https://github.com/HarshKapadia2/attendance_management/issues) section.
 
+- If you make a contribution, please do not forget to add your personal details to the [CONTRIBUTORS.md](https://github.com/HarshKapadia2/attendance_management/blob/master/CONTRIBUTORS.md) file!
+
 ## Requirements / Dependencies
 - [Python 3](https://www.python.org/) (Enable/add Python to path)
 - pip (comes bundled with Python 3)
