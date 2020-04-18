@@ -3,7 +3,8 @@
    <a href="https://attendance-management-flask.herokuapp.com/"><b>https://attendance-management-flask.herokuapp.com/</b></a>
    <br />
    <br />
-   <a href="#contributing"><img alt="Contributions Welcome" src="https://img.shields.io/badge/contributions-welcome-brightgreen?style=flat-square"></a>
+   <a href="#contributing"><img alt="Version" src="https://img.shields.io/badge/version-1.0.0-green?style=flat-square"></a>
+   <a href="#contributing"><img alt="Contributions Welcome" src="https://img.shields.io/badge/contributions-welcome-green?style=flat-square"></a>
    <img alt="Git MIT license" src="https://img.shields.io/github/license/HarshKapadia2/git_basics?style=flat-square">
    <br />
    <br />
@@ -64,7 +65,7 @@
 - To run the website: `python app.py`.
 - To view running website: default: `localhost:5000` or `127.0.0.1:5000`
 
-## ***Creators***
+## ***Authors***
 - Harsh Kapadia
    - [LinkedIn](https://www.linkedin.com/in/harsh-kapadia-426999175/)
    - [Twitter](https://twitter.com/harshgkapadia)
