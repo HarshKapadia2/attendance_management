@@ -46,6 +46,7 @@
 ## ***Contributions***
 - All contributors are most welcome!
 - Do view the [`CONTRIBUTING.md`](https://github.com/HarshKapadia2/attendance_management/blob/master/CONTRIBUTING.md) file for further instructions, requirements/dependencies & local project setup instructions!
+- All the amazing contributors to this repo can be found in the [CONTRIBUTORS.md](https://github.com/HarshKapadia2/attendance_management/blob/master/CONTRIBUTORS.md) file!
 
 ## ***Authors***
 - Harsh Kapadia
