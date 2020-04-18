@@ -3,8 +3,8 @@
    <a href="https://attendance-management-flask.herokuapp.com/"><b>https://attendance-management-flask.herokuapp.com/</b></a>
    <br />
    <br />
-   <a href="#contributing"><img alt="Version" src="https://img.shields.io/badge/version-1.0.0-green?style=flat-square"></a>
-   <a href="#contributing"><img alt="Contributions Welcome" src="https://img.shields.io/badge/contributions-welcome-green?style=flat-square"></a>
+   <a href="#"><img alt="Version" src="https://img.shields.io/badge/version-1.0.0-green?style=flat-square"></a>
+   <a href="https://github.com/HarshKapadia2/attendance_management/blob/master/CONTRIBUTING.md"><img alt="Contributions Welcome" src="https://img.shields.io/badge/contributions-welcome-green?style=flat-square"></a>
    <img alt="Git MIT license" src="https://img.shields.io/github/license/HarshKapadia2/git_basics?style=flat-square">
    <br />
    <br />
@@ -66,6 +66,10 @@
 - Enable Cloud Firestore and e-mail-password auth for the project in Firebase.
 - To run the website: `python app.py`.
 - To view running website: default: `localhost:5000` or `127.0.0.1:5000`
+
+## ***Contributions***
+- All contributors are most welcome!
+- Do view the [`CONTRIBUTING.md`](https://github.com/HarshKapadia2/attendance_management/blob/master/CONTRIBUTING.md) file for further instructions!
 
 ## ***Authors***
 - Harsh Kapadia
