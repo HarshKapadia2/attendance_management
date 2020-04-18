@@ -9,6 +9,8 @@
    <br />
    <br />
    <b>A web app for teachers and students.</b>
+   <br />
+   <i>For any suggestion(s) or/and problem(s) please do not hesitate to open an <a href="https://github.com/HarshKapadia2/attendance_management/issues">issue</a>!</i>
 </p>
 
 ## ***Functionalities***
