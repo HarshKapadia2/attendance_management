@@ -30,8 +30,6 @@
       - Number of lectures conducted by the teacher
       - Attendance percentage
       
----
-      
 ## ***Technologies Used***
 - Back end
    - Flask
@@ -44,14 +42,10 @@
       - HTML
       - CSS
       - JS
-   
----
 
 ## ***Contributions***
 - All contributors are most welcome!
-- Do view the [`CONTRIBUTING.md`](https://github.com/HarshKapadia2/attendance_management/blob/master/CONTRIBUTING.md) file for further instructions & local project setup instructions!
-
----
+- Do view the [`CONTRIBUTING.md`](https://github.com/HarshKapadia2/attendance_management/blob/master/CONTRIBUTING.md) file for further instructions, requirements/dependencies & local project setup instructions!
 
 ## ***Authors***
 - Harsh Kapadia
