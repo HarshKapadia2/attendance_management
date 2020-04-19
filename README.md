@@ -2,6 +2,8 @@
 <p align="center">
    <a href="https://attendance-management-flask.herokuapp.com/"><b>https://attendance-management-flask.herokuapp.com/</b></a>
    <br />
+   <i>Use the <a href="https://github.com/HarshKapadia2/attendance_management/blob/master/sample_log_in_details.md">sample_log_in_details.md</a> file to explore the hosted webapp.</i>
+   <br />
    <br />
    <a href="#"><img alt="Version" src="https://img.shields.io/badge/version-1.0.0-green?style=flat-square"></a>
    <a href="https://github.com/HarshKapadia2/attendance_management/blob/master/CONTRIBUTING.md"><img alt="Contributions Welcome" src="https://img.shields.io/badge/contributions-welcome-green?style=flat-square"></a>
