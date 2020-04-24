@@ -17,15 +17,16 @@ db = firestore.client()
 # pyrebase init
 # Your web app's Firebase configuration
 firebaseConfig = {
-    'apiKey': "",
-    'authDomain': "",
-    'databaseURL': "",
-    'projectId': "",
-    'storageBucket': "",
-    'messagingSenderId': "",
-    'appId': "",
-    'measurementId': ""
+  'apiKey': "",
+  'authDomain': "",
+  'databaseURL': "",
+  'projectId': "",
+  'storageBucket': "",
+  'messagingSenderId': "",
+  'appId': "",
+  'measurementId': ""
 }
+
 firebase = pyrebase.initialize_app(firebaseConfig)
 auth = firebase.auth()
 
