@@ -1,12 +1,13 @@
 {
-  "type": "",
-  "project_id": "",
-  "private_key_id": "",
-  "private_key": "",
-  "client_email": "",
-  "client_id": "",
-  "auth_uri": "",
-  "token_uri": "",
-  "auth_provider_x509_cert_url": "",
-  "client_x509_cert_url": ""
+  "type": "service_account",
+  "project_id": "attendance-system-6eecf",
+  "private_key_id": "cecc6b222db1754dfb172662ac91401586bd6e49",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC+Ky9XJakthbPv\nY1UjIJ8I6OHwhnyGFeFSukv95O6Up/MNAQrRdbeD8IucprNAVHYZN8jI0CJR4BPi\nW7OLTzmkXo/och3Dt+icakfdWFg6XtIs3NLIzrJbng7DuC7Y/RJIzox0s+fCJWqo\nrcbGTwHNkOlY20p5dn/4DQKfeiBQ+tvz/0Jp8VUa6jm+g1wcoQrIoOmADkbvvcl3\n/kkBOhZ1bNl94QNS+0H3S3phLBrt5sfX5KAkgILRkZuGY5TVcn3BWlG2E11R5Kl8\nQtdy+FORuYDGPTIoTO/S4mHXF4UIuBaandN9Ey8bVYJI32XVNZBntvDozjqoxmrn\nR3HoNd5TAgMBAAECggEADHkTpVEkjAZRe3mV63RnyfNQYnDHuRm1SjJK6q+50ElF\nwUwYtA1XCJHd7lvmtOj1SAknI7i3D4y1cSrXl2MOYlALe1EEz8H/wUadSRDS1J1E\nhsnDD4WzIBw5Vq/9bqEGsnzNrJfiMxM2MDMZrwcelKeVDo1vkJDrqs7bpa8icH0u\nvdzMuykB4GIUBcRi0u+hW76bhy1Ki4xqbPOgoF2vTz2XMxAHfHTKjvsMsrnlIe9R\nYBQQeUZ3z9ma5MWD25LQWLsY4YVsG25GYSIEVgMRot/q3CVh1jvR+adLHRm/iXKQ\nQylTP2lA6hFoAA1giHwUkY86BFi+9X1gncbIQgWPMQKBgQDhOGa2f5iCyD7X7Csi\n3ja4wYDXFLAsDXSkEuXbCugnuO3yQeuoGcFtlDMUkdUZdO4enoVo1Oz+iwdyVZCT\nFa0rRqje/8/vHSdHdjQeuNTivHsroJpP1ZVtKZG74VlLW3a+7XBaHVRoLEkEtlxb\n0s6LD2WaDFIOb6j13eOhbB2+cQKBgQDYKHYO6RUD6Nd9G3wC2a385oVFQ1PCRk/R\nXqkGqc1hiMcO+n49+4ocGw5pVkmVmPxGhEvqu1h96fciHGbvddJ9HlNfjsoq4xiS\n7KInSluup7XB6/EzZrfa9EeUdPZRjARnkH8SHsUZsm6LeyTB5U1/g914HmXC+WZ3\nUgYpO/5TAwKBgDdVyjawpuILHRWkGv0YJ83BDUzK8nYAYFYnpn3o8h1AXIYXGDVX\nDqVDskEti3QTvKWdQR3+orPvqMa4qyrYOpHVbIxNweL4ALyYGDosI3IJ6SFQ9lkD\nGxGVEw9cULopIMXMRLx/VEu8Bby4qXyOEN0tzULKICcX3CV8fP8eNzihAoGAZVUa\ne0TzUCDgnEq9KQzpDqz2fxDf/CxAENPCg1go6vdW8gOmGOKJzUE10VXdKx9L7Lbq\nbAElq+l5rGkKLGncokEMLrjet5o8k+wQ3EB0mH0QrPcx3LnjqOZphAQM0Q/FpNNN\nbq40Eibewc6Z3bfkS8oCkeQWKoAGdBtkvgHc6QcCgYAO9oho2OqyswCM0KTfVzlU\nw5Map0ecFPMr+jtOudt5f8x5VxRmqIykPMLflbCWNZAZoDqviJYbohvXzFBsBnOE\nR+LUBFN5+JzJ4PNJ23YqllI3C6F5gDfV7V6ELPuPIGDO4e6RP2IIiKSnu7Du6QyP\ns9wW/NWoVJ/Rzv0fpWVQbg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-g5unj@attendance-system-6eecf.iam.gserviceaccount.com",
+  "client_id": "110001876808417228296",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-g5unj%40attendance-system-6eecf.iam.gserviceaccount.com"
 }
+

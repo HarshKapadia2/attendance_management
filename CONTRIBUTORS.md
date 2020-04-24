@@ -4,6 +4,7 @@
 ***Add your e-mail in parantheses after your GitHub ID!***
 
 ## Contributors
+- kushal98 (kagrawal61@gmail.com)
 - Add your names here!
 
 ## Authors

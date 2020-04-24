@@ -62,6 +62,36 @@
   <script defer src="https://buttons.github.io/buttons.js"></script>
   <!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
   <script defer type="text/javascript" src="{{ url_for('static', filename='js/material-kit.js') }}"></script>
+
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCZqxSYBKtPhsqmu1WS_0HV2Og0EUTFbKM",
+    authDomain: "attendance-system-6eecf.firebaseapp.com",
+    databaseURL: "https://attendance-system-6eecf.firebaseio.com",
+    projectId: "attendance-system-6eecf",
+    storageBucket: "attendance-system-6eecf.appspot.com",
+    messagingSenderId: "409471699821",
+    appId: "1:409471699821:web:db8fe993cb8b0615396864",
+    measurementId: "G-5RL77QK3PT"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+
+
+
+
 </body>
 
 </html>
