@@ -43,18 +43,20 @@
               {% endfor %}
             {% endif %}
           {% endwith %}
-          <form action="/student_login" method="GET">
-            <button type="submit" class="btn btn-danger btn-raised btn-lg">
-              <i class="fa fa-user-circle-o"></i> 
-               Student log in/sign up
-            </button>
-          </form>
-          <form action="/teacher_login" method="GET">
-            <button type="submit" class="btn btn-danger btn-raised btn-lg">
-              <i class="fa fa-user-circle-o"></i> 
-               Teacher log in/sign up
-            </button>
-          </form>
+          <div>
+            <form action="/student_login" method="GET">
+              <button type="submit" class="btn btn-danger btn-raised btn-lg">
+                <i class="fa fa-user-circle-o"></i> 
+                Student log in/sign up
+              </button>
+            </form>
+            <form action="/teacher_login" method="GET">
+              <button type="submit" class="btn btn-danger btn-raised btn-lg">
+                <i class="fa fa-user-circle-o"></i> 
+                Teacher log in/sign up
+              </button>
+            </form>
+          </div>
           <h4>This is an open source project! View the code or contribute <a href="https://github.com/HarshKapadia2/attendance_management" style="color: yellow;">here</a>!</h4>
         </div>
       </div>
@@ -66,7 +68,7 @@
         <h2 class="title">Here is our team</h2>
         <div class="team">
           <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-6">
               <div class="team-player">
                 <div class="card card-plain">
                   <div class="col-md-6 ml-auto mr-auto">
@@ -83,11 +85,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
-              <div class="team-player">
-              </div>
-            </div>
-            <div class="col-md-4">
+            <div class="col-md-6">
               <div class="team-player">
                 <div class="card card-plain">
                   <div class="col-md-6 ml-auto mr-auto">

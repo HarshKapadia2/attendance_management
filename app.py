@@ -59,34 +59,34 @@ def teacher_login():
     elif request.method == 'POST':
         email = request.form['email']
         password = request.form['password']
-        division = request.form['division'].upper()
 
         # check e-mail, div & pass
         flag_1 = flag_2 = flag_3 = flag_4 = False
         div_ref = db.collection('division')
         divs = div_ref.stream()
+        division = ""
         # check for div existence
         for div in divs:
-            if div.id == division:
-                flag_1 = True
-                div_details = div_ref.document(division).get().to_dict()
-                # check for teacher existence in div
-                for teacher_email in div_details['teacher_email']:
-                    if teacher_email == email:
-                        flag_2 = True
-                        # check pass
-                        try:
-                            teacher_user = auth.sign_in_with_email_and_password(email, password)
-                            # print(teacher_user) # get back details
-                            flag_3 = True
-                            # e-mail verification check
-                            acc_info = auth.get_account_info(teacher_user['idToken'])
-                            if acc_info['users'][0]['emailVerified'] == True:
-                                flag_4 = True
-                        except:
-                            flag_3 = False
-                        break
-                break
+            flag_1 = True
+            div_details = div_ref.document(div.id).get().to_dict()
+            # check for teacher existence in div
+            for teacher_email in div_details['teacher_email']:
+                if teacher_email == email:
+                    flag_2 = True
+                    # check pass
+                    try:
+                        teacher_user = auth.sign_in_with_email_and_password(email, password)
+                        # print(teacher_user) # get back details
+                        flag_3 = True
+                        division = div.id
+                        # e-mail verification check
+                        acc_info = auth.get_account_info(teacher_user['idToken'])
+                        if acc_info['users'][0]['emailVerified'] == True:
+                            flag_4 = True
+                    except:
+                        flag_3 = False
+                    break
+            break
         
         if flag_1 == False or flag_2 == False or flag_3 == False or flag_4 == False:
             flash('Incorrect, unverified or non-existent e-mail, division or password...', 'error')
@@ -265,33 +265,34 @@ def student_login():
     elif request.method == 'POST':
         email = request.form['email']
         password = request.form['password']
-        division = request.form['division'].upper()
+        # division = request.form['division'].upper()
 
         # check e-mail, div & pass
         flag_1 = flag_2 = flag_3 = flag_4 = False
         div_ref = db.collection('division')
         divs = div_ref.stream()
-        # check for div existence
+        division = ""
+
         for div in divs:
-            if div.id == division:
-                flag_1 = True
-                div_student_details = div_ref.document(division).collection('student').stream()
-                # check for student existence in div
-                for student in div_student_details:
-                    if student.id == email:
-                        flag_2 = True
-                        # check pass
-                        try:
-                            st_user = auth.sign_in_with_email_and_password(email, password)
-                            flag_3 = True
-                            # e-mail verification check
-                            acc_info = auth.get_account_info(st_user['idToken'])
-                            if acc_info['users'][0]['emailVerified'] == True:
-                                flag_4 = True
-                        except:
-                            flag_3 = False
-                        break
-                break
+            flag_1 = True
+            div_student_details = div_ref.document(div.id).collection('student').stream()
+            # check for student existence in div
+            for student in div_student_details:
+                if student.id == email:
+                    flag_2 = True
+                    # check pass
+                    try:
+                        st_user = auth.sign_in_with_email_and_password(email, password)
+                        flag_3 = True
+                        division = div.id
+                        # e-mail verification check
+                        acc_info = auth.get_account_info(st_user['idToken'])
+                        if acc_info['users'][0]['emailVerified'] == True:
+                            flag_4 = True
+                    except:
+                        flag_3 = False
+                    break
+            break
 
         if flag_1 == False or flag_2 == False or flag_3 == False or flag_4 == False:
             flash('Incorrect, unverified or non-existent e-mail, division or password...', 'error')
