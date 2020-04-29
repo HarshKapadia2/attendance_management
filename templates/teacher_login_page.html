@@ -50,13 +50,15 @@
                   {% endif %}
                 {% endwith %}
                 <span class="bmd-form-group">
-                  <div class="input-group">
+                  <div class="input-group" style="display: flex; flex-direction: column;">
                     <div class="input-group-prepend">
                       <span class="input-group-text">
                         Division (Uppercase Letters & No Spaces)
                       </span>
                     </div>
-                    <input name="division" type="text" class="form-control" placeholder="Division..." required>
+                    <div>
+                      <input style=" margin-left: 15px;" name="division" type="text" class="form-control" placeholder="Division..." required>
+                    </div>
                   </div>
                 </span>
                 <span class="bmd-form-group">
