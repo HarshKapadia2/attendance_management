@@ -17,6 +17,8 @@
    For any suggestion(s) or/and problem(s), please do not hesitate to open an <a href="https://github.com/HarshKapadia2/attendance_management/issues">issue</a>!
 </p>
 
+---
+
 ## ***Functionalities***
 - Teacher's functionalities
    - Give attendance to all students as per entered date.
@@ -37,10 +39,10 @@
 ## ***Technologies Used***
 - Back end
    - Flask
-- DB and Auth
-   - Firebase
-      - Cloud Firestore
-      - e-mail-password authentication
+   - DB and auth
+      - Firebase
+         - Cloud Firestore
+         - e-mail-password authentication
 - Front end
    - Templates from [Creative Tim](https://www.creative-tim.com/) Material Kit PRO - v2.2.0
       - HTML
