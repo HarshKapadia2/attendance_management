@@ -6,7 +6,7 @@
    <br />
    <a href="#"><img alt="Version" src="https://img.shields.io/badge/version-1.0.1-green?style=flat"></a>
    <a href="https://github.com/HarshKapadia2/attendance_management/blob/master/CONTRIBUTING.md"><img alt="Contributions Welcome" src="https://img.shields.io/badge/contributions-welcome-green?style=flat"></a>
-   <img alt="Git MIT license" src="https://img.shields.io/github/license/HarshKapadia2/git_basics?style=flat">
+   <a href="https://github.com/HarshKapadia2/attendance_management/blob/master/LICENSE"><img alt="Git MIT license" src="https://img.shields.io/github/license/HarshKapadia2/git_basics?style=flat"></a>
    <br />
    <br />
    <b>Hosted at </b><a href="https://attendance-management-flask.herokuapp.com/"><b>https://attendance-management-flask.herokuapp.com/</b></a>
