@@ -1,5 +1,5 @@
 <p align="center">
-   <img src="https://github.com/HarshKapadia2/attendance_management/blob/master/attendance_manager_logo.png" alt="Attendance Manager" width=450>
+   <img src="https://github.com/HarshKapadia2/attendance_management/blob/master/attendance_manager_logo.png" alt="Attendance Manager">
    <br />
    A web app for teachers and students to manage their attendance.
    <br />
