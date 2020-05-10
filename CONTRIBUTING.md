@@ -1,5 +1,7 @@
 # Welcome, contributors! :smiley:
 
+- Please be mindful of the [code of conduct](https://github.com/HarshKapadia2/attendance_management/blob/master/CODE_OF_CONDUCT.md) while interacting or contributing!
+
 - Do not hesitate to raise an [issue](https://github.com/HarshKapadia2/attendance_management/issues) if you have any problems!
 
 - **Beginner contributors** can find issues to be fixed under the `good first issue` label in the [issues](https://github.com/HarshKapadia2/attendance_management/issues) section.
