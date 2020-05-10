@@ -20,6 +20,7 @@
 ---
 
 ## ***Functionalities***
+
 - Teacher's functionalities
    - Give attendance to all students as per entered date.
    - On the dashboard, see the number of lectures conducted (by the teacher) and all students in the division in a table with their
@@ -37,6 +38,7 @@
       - Attendance percentage
       
 ## ***Technologies Used***
+
 - Back end
    - Flask
    - DB and auth
@@ -50,11 +52,17 @@
       - JS
 
 ## ***Contributions***
+
 - All contributors are most welcome!
 - Do view the [`CONTRIBUTING.md`](https://github.com/HarshKapadia2/attendance_management/blob/master/CONTRIBUTING.md) file for further instructions, requirements/dependencies & local project setup instructions!
 - All the amazing contributors to this repo can be found in the [`CONTRIBUTORS.md`](https://github.com/HarshKapadia2/attendance_management/blob/master/CONTRIBUTORS.md) file!
 
+## ***Code of conduct***
+
+- Please view the [`CODE_OF_CONDUCT.md`](https://github.com/HarshKapadia2/attendance_management/blob/master/CODE_OF_CONDUCT.md) file for details.
+
 ## ***Authors***
+
 - Harsh Kapadia
    - [LinkedIn](https://www.linkedin.com/in/harsh-kapadia-426999175/)
    - [Twitter](https://twitter.com/harshgkapadia)
