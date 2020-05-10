@@ -1,8 +1,8 @@
 # ***Attendance Management***
 <p align="center">
-   <a href="https://attendance-management-flask.herokuapp.com/"><b>https://attendance-management-flask.herokuapp.com/</b></a>
+   <img src="https://github.com/HarshKapadia2/attendance_management/blob/master/attendance_manager_logo.png" alt="Attendance Manager" width=450>
    <br />
-   <i>Use the <a href="https://github.com/HarshKapadia2/attendance_management/blob/master/sample_log_in_details.md">sample_log_in_details.md</a> file to explore the hosted webapp.</i>
+   A web app for teachers and students to manage their attendance.
    <br />
    <br />
    <a href="#"><img alt="Version" src="https://img.shields.io/badge/version-1.0.1-green?style=flat-square"></a>
@@ -10,9 +10,12 @@
    <img alt="Git MIT license" src="https://img.shields.io/github/license/HarshKapadia2/git_basics?style=flat-square">
    <br />
    <br />
-   <b>A web app for teachers and students.</b>
+   <b>Hosted at </b><a href="https://attendance-management-flask.herokuapp.com/"><b>https://attendance-management-flask.herokuapp.com/</b></a>
    <br />
-   <i>For any suggestion(s) or/and problem(s) please do not hesitate to open an <a href="https://github.com/HarshKapadia2/attendance_management/issues">issue</a>!</i>
+   <i>Use the <a href="https://github.com/HarshKapadia2/attendance_management/blob/master/sample_log_in_details.md">sample_log_in_details.md</a> file to explore the hosted webapp.</i>
+   <br />
+   <br />
+   For any suggestion(s) or/and problem(s) please do not hesitate to open an <a href="https://github.com/HarshKapadia2/attendance_management/issues">issue</a>!<
 </p>
 
 ## ***Functionalities***
