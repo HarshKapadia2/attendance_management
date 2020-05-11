@@ -17,7 +17,7 @@
    - Refer to `requirements.txt` for more information on packages.
    - Run this command after creating a virtual environment.
 
-## Project dev setup
+## Project dev instructions
 - Fork this repo.
 - [`clone` your forked repo using Git.](https://harshkapadia2.github.io/git_basics/#_git_clone)
 - [Activate the virtual environment (scroll down for different terminals)](https://docs.python.org/3/library/venv.html#creating-virtual-environments) & keep it activated whenever you're working on/using this project.
@@ -32,6 +32,7 @@
 - To run the website: `python app.py`.
 - To view running website: default: `localhost:5000` or `127.0.0.1:5000` (will be mentioned in the terminal as well)
 - Make your contribution to the code base!
+- Add your personal details to the [CONTRIBUTORS.md](https://github.com/HarshKapadia2/attendance_management/blob/master/CONTRIBUTORS.md) file.
 - Push the code to your forked repo.
    - **NOTE:** Please do not commit and upload (push) `key.json`, `firebaseConfig.json` without erasing your personal data from them and please leave the `app.secret_key` blank before committing and pushing.
 - Make a pull request (PR)! (**Please include the number, ie, `#` of the issue(s) that you're addressing, if any, in the PR message.**)
