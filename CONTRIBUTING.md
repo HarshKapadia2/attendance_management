@@ -17,10 +17,9 @@
    - Refer to `requirements.txt` for more information on packages.
    - Run this command after creating a virtual environment.
 
-## Local project setup
+## Project dev setup
 - Fork this repo.
-- [`clone` it using Git (scroll down for the `git clone command`)](https://github.com/HarshKapadia2/git_basics#basic-git-commands).
-- Create a virtual environment using `virtualenv <environment_name>`.
+- [`clone` your forked repo using Git.](https://harshkapadia2.github.io/git_basics/#_git_clone)
 - [Activate the virtual environment (scroll down for different terminals)](https://docs.python.org/3/library/venv.html#creating-virtual-environments) & keep it activated whenever you're working on/using this project.
 - Run `pip install flask firebase-admin pyrebase gunicorn` or `pip install -r requirements.txt`.
 - Create a new project in your [Firebase console](https://console.firebase.google.com/).
@@ -28,10 +27,13 @@
    - Register the web app in the project to get this snippet.
 - Add the key snippet from the project in theFirebase console to `./key.json`.
    - The key snippet is the generated private key file of the `Python` Firebase Admin SDK found in `Project Settings/Service Accounts`.
-- Add a random string to `app.secret_key` variable at the start of the `./app.py` file.
+- Add a random string to the `app.secret_key` variable at the start of the `./app.py` file.
 - Enable Cloud Firestore and e-mail-password auth for the project in Firebase.
 - To run the website: `python app.py`.
 - To view running website: default: `localhost:5000` or `127.0.0.1:5000` (will be mentioned in the terminal as well)
+- Make your contribution to the code base!
+- Push the code to your forked repo. 
+- Make a pull request (PR)! (**Please include the number, ie, `#` of the issue(s) that you're addressing, in the PR message.**)
 
 ---
 
