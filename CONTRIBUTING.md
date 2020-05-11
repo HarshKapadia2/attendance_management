@@ -34,8 +34,10 @@
 - Make your contribution to the code base!
 - Add your personal details to the [CONTRIBUTORS.md](https://github.com/HarshKapadia2/attendance_management/blob/master/CONTRIBUTORS.md) file.
 - Push the code to your forked repo.
-   - **NOTE:** Please do not commit and upload (push) `key.json`, `firebaseConfig.json` without erasing your personal data from them and please leave the `app.secret_key` blank before committing and pushing.
-- Make a pull request (PR)! (**Please include the number, ie, `#` of the issue(s) that you're addressing, if any, in the PR message.**)
+   - **NOTE** 
+      - Please do not commit and upload (push) `key.json`, `firebaseConfig.json` without erasing your personal data from them and please leave the `app.secret_key` blank before committing and pushing.
+      - [Use the correct commit message structure](https://harshkapadia2.github.io/git_basics/#_git_commit) Eg: `:bug: fix: Remove typo (#0)`, which renders like this ':bug: fix: Remove typo (#0)'.
+- Make a pull request (PR)!
 
 ---
 
