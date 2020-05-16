@@ -1,0 +1,123 @@
+<!--
+ =========================================================
+ Material Kit PRO - v2.2.0
+ =========================================================
+
+ Product Page: https://www.creative-tim.com/product/material-kit-pro
+ Copyright 2019 Creative Tim (https://www.creative-tim.com)
+
+ Coded by Creative Tim
+
+ =========================================================
+
+ The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+-->
+{% extends 'base.html' %}
+
+{% block head %}
+  <title>Teacher's Dashboard</title>
+{% endblock %}
+  
+{% block body %}
+<body class="shopping-cart sidebar-collapse">
+  <nav class="navbar navbar-color-on-scroll navbar-transparent    fixed-top  navbar-expand-lg " color-on-scroll="100" id="sectionsNav">
+    <div class="container">
+      <div class="navbar-translate">
+        <div class="navbar-brand">
+          Attendance Management
+        </div>
+      </div>
+      <form action="/teacher/add_edit_lecture" method="GET">
+        <button type="submit" class="btn btn-danger btn-raised btn-lg">Add/Edit Lecture</button>
+      </form>
+      <form action="/logout" method="GET">
+        <button type="submit" class="btn btn-danger btn-raised btn-lg">Log Out</button>
+      </form>
+    </div>
+  </nav>
+  <div class="page-header header-filter header-small" data-parallax="true" style="background-image: url('../static/img/desk_chair.jpg');">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 ml-auto mr-auto text-center">
+          <h2 class="title">Teachers's Dashboard</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main main-raised">
+    <div class="container">
+      <div class="card card-plain">
+        <div class="card-body">
+          <h3 class="card-title">{{ teacher_details.year }} {{ teacher_details.sem }} {{ teacher_details.division }} {{ teacher_details.subject }} {{ teacher_details.name }}</h3>
+          <h3 class="card-title">Lectures Conducted: {{ lec_conducted_count }}</h3>
+          {% with messages = get_flashed_messages() %}
+            {% if messages: %}
+              {% for message in messages: %}
+                <h4>{{ message }}</h4>
+              {% endfor %}
+            {% endif %}
+          {% endwith %}
+          <br />
+          <div class="table-responsive">
+            <table class="table table-shopping table-striped">
+              <thead>
+                <tr>
+                  <th class="text-center">Roll Number</th>
+                  <th class="text-center">Name</th>
+                  <th class="text-center">Percentage</th>
+                  <th class="text-center">Lecs. Attended</th>
+                  {% for lecture in lectures: %}
+                    <th class="text-center">{{ lecture.to_dict().date }}</th>
+                  {% endfor %}
+                </tr>
+              </thead>
+              <tbody>
+                {% for student in students: %}
+                  <tr>
+                    <td class="td-number text-center">
+                      {{ student.to_dict().roll_no }}
+                    </td>
+                    <td class="td-number text-center">
+                      {{ student.to_dict().name }}
+                    </td>
+                    <td class="td-number text-center">
+                      {{ attendance[student.id][1] }} %
+                    </td>
+                    <td class="td-number text-center">
+                      {{ attendance[student.id][0] }}
+                    </td>
+                    {% for bool_val in attendance[student.id][2]: %}
+                      {% if bool_val == True: %}
+                        <td class="td-number text-center">
+                          <div class="form-check disabled">
+                            <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox" value="" disabled checked>
+                              <span class="form-check-sign">
+                                <span class="check"></span>
+                              </span>
+                            </label>
+                          </div>
+                        </td>
+                      {% else: %}
+                        <td class="td-number text-center">
+                          <div class="form-check disabled">
+                            <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox" value="" disabled unchecked>
+                              <span class="form-check-sign">
+                                <span class="check"></span>
+                              </span>
+                            </label>
+                          </div>
+                        </td>
+                      {% endif %}
+                    {% endfor %}
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

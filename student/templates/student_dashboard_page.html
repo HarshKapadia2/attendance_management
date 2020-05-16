@@ -1,0 +1,88 @@
+<!--
+ =========================================================
+ Material Kit PRO - v2.2.0
+ =========================================================
+
+ Product Page: https://www.creative-tim.com/product/material-kit-pro
+ Copyright 2019 Creative Tim (https://www.creative-tim.com)
+
+ Coded by Creative Tim
+
+ =========================================================
+
+ The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+-->
+{% extends 'base.html' %}
+
+{% block head %}
+  <title>Student's Dashboard</title>
+{% endblock %}
+  
+{% block body %}
+<body class="shopping-cart sidebar-collapse">
+  <nav class="navbar navbar-color-on-scroll navbar-transparent    fixed-top  navbar-expand-lg " color-on-scroll="100" id="sectionsNav">
+    <div class="container">
+      <div class="navbar-translate">
+        <div class="navbar-brand">
+          Attendance Management
+        </div>
+      </div>
+      <form action="/logout" method="GET">
+        <button type="submit" class="btn btn-danger btn-raised btn-lg">Log Out</button>
+      </form>
+    </div>
+  </nav>
+  <div class="page-header header-filter header-small" data-parallax="true" style="background-image: url('../static/img/desk_chair.jpg');">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 ml-auto mr-auto text-center">
+          <h2 class="title">{{student_details.name}}'s Dashboard</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main main-raised">
+    <div class="container">
+      <div class="card card-plain">
+        <div class="card-body">
+          <h3 class="card-title">{{ div_details.year }} {{ div_details.sem }} {{ division }} {{ student_details.roll_no }}</h3>
+          <br />
+          <div class="table-responsive">
+            <table class="table table-shopping table-striped">
+              <thead>
+                <tr>
+                  <th>Subject</th>
+                  <th class="text-center">Teacher</th>
+                  <th class="text-center">Lectures Attended</th>
+                  <th class="text-center">Lectures Conducted</th>
+                  <th class="text-center">Percentage</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for teacher_email in div_details['teacher_email']: %}
+                  <tr>
+                    <td class="td-name">
+                      {{ attendance[teacher_email][0] }}
+                    </td>
+                    <td class="td-number text-center">
+                      {{ attendance[teacher_email][1] }}
+                    </td>
+                    <td class="td-number text-center">
+                      {{ attendance[teacher_email][2] }}
+                    </td>
+                    <td class="td-number text-center">
+                      {{ attendance[teacher_email][3] }}
+                    </td>
+                    <td class="td-number text-center">
+                      {{ attendance[teacher_email][4] }} %
+                    </td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
