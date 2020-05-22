@@ -18,7 +18,7 @@ app.register_blueprint(student, url_prefix='/student')
 @app.route('/', methods = ['GET'])
 def home_page():
     if 'user' not in session:
-        return render_template('home_page.html')
+        return render_template('home-page.html')
     else:
         return redirect('/logout')
 
