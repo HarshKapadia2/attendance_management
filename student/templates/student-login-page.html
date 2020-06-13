@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block head %}
+	<title>Student Login</title>
+
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/login-page.css') }}">
+{% endblock %}
+
+{% block body %}
+<body>
+	<div class="navbar">
+		<h2 class="navbar-title">Attendance Manager</h1>
+	</div>
+	  
+	<div class="container">
+		<div class="login-card">
+			<form method="POST">
+				<h1>Student Login</h1>
+
+				<label for="email" style="text-align: left;"><p>e-mail Address</p></label>
+				<input id="email" type="email" name="email" required autofocus>
+
+				<div class="password-div">
+					<div>
+						<label for="password"><p>Password</p></label>
+					</div>
+					<div>
+						<a href="forgot.html">Forgot Password?</a>
+					</div>
+				</div>
+				<input id="password" type="password" name="password" required data-eye>
+
+				<div>
+					<button class="button">
+						Login
+					</button>
+				</div>
+
+				<div class="account-div">
+					<div>
+						<label><p>Don't have an account?</p></label>
+					</div>
+					<div>
+						<a href="/student/signup">Create One</a>
+					</div>
+				</div>
+			
+			</form>
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,143 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+a {
+    text-decoration: none; 
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Navigation Bar */
+
+.navbar {
+    height: 9vh;
+    background-color: #3b6978;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-title {
+    color: white;
+    padding-top: 14px;
+    padding-left: 20px;
+    font-weight: initial;
+}
+
+
+/* Main Section */
+
+.container{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    background-color: #cae8d5;
+}
+
+.login-card {
+    height: 43vh;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 3%;
+    margin-right: 3%;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+    background-color: #fff;
+    padding: 2%;
+}
+
+h1 {
+    margin-bottom: 8%;
+    color: #204051;
+    font-weight: lighter;
+}
+
+p {
+    color: #204051;
+}
+
+#email {
+    width: 98%;
+    margin: 3% 0%;
+}
+
+.password-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5%;
+    margin-bottom: 3%;
+}
+
+#password {
+    width: 98%;
+}
+
+#password1 {
+    width: 98%;
+}
+
+.button {
+    width: 100%;
+    font-size: 16px;
+    padding: 2%;
+    background-color:#1b6ca8;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 2px solid white;
+    color: white;
+    margin-top: 8%;
+    margin-bottom: 8%;
+}
+
+.button:hover {background-color:#0e9aa7}
+
+
+/* Footer */
+
+.copyright {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 8%;
+    padding-right: 8%;
+    background-color: #cae8d5;
+}
+  
+.copyright-msg{
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #204051;
+}
+
+
+/* Media Queries */
+
+@media screen and (max-width:1000px) {
+    .copyright {
+        height: 10vh;
+    }
+    .login-card {
+        height: 46vh;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .login-card {
+        margin-top: 10%;
+        margin-bottom: 0%;
+    }
+}    

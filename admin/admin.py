@@ -17,20 +17,20 @@ firebaseConfig = {
   'messagingSenderId': "",
   'appId': "",
   'measurementId': ""
-}
+  }
  
 
 firebase = pyrebase.initialize_app(firebaseConfig)
 auth = firebase.auth()
 
-student = Blueprint('student', __name__, static_folder='../static', template_folder='templates')
+admin = Blueprint('admin', __name__, static_folder='../static', template_folder='templates')
 
-@student.route('/login', methods=['GET'])
+@admin.route('/login', methods=['GET'])
 def login():
   if request.method == 'GET':
-    return render_template('student-login-page.html')
+    return render_template('admin-login-page.html')
 
-@student.route('/signup', methods=['GET'])
+@admin.route('/signup', methods=['GET'])
 def signup():
   if request.method == 'GET':
-    return render_template('student-signup-page.html')
+    return render_template('admin-signup-page.html')

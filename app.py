@@ -5,6 +5,7 @@ import pyrebase
 from init.init import init
 from teacher.teacher import teacher
 from student.student import student
+from admin.admin import admin
 
 app = Flask(__name__)
 
@@ -13,7 +14,7 @@ app.secret_key = '' # for flask session.
 app.register_blueprint(init)
 app.register_blueprint(teacher, url_prefix='/teacher')
 app.register_blueprint(student, url_prefix='/student')
-
+app.register_blueprint(admin, url_prefix='/admin')
 
 @app.route('/', methods = ['GET'])
 def home_page():

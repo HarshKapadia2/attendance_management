@@ -8,105 +8,73 @@
 
 {% block body %}
   <body>
-    <div class="container-fluid">
-        <!-- Nav Bar -->
-  
-        <nav class="navbar navbar-expand-lg navbar-dark">
-  
-          <a class="navbar-brand" style="color:white;">Attendance Manager</a>
-  
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-  
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-  
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="">About this page</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#authors">Authors</a>
-              </li>
-            </ul>
-  
-          </div>
-        </nav>
-   </div>    
-    
-  <div>
-      <h1 style="color: #204051;">Attendance Manager</h1>
-      <h3>A solution for both teachers and students!</h3>
-  </div>
+		<div class="navbar">
+			<h2 class="navbar-title">Attendance Manager</h1>
+		</div>
 
-  <section id="login-signup">
-    <div class="row">
-      <form action="/teacher/login" method="GET">
-        <div class="col-lg-4" style="text-align: center;">
-          <button type="submit" class="btn btn-primary btn-lg user-button"><i class="fas fa-chalkboard-teacher"></i> &nbsp; TEACHER LOGIN/SIGNUP</button>
-        </div>
-      </form>
-
-      <form action="" method="GET">
-        <div class="col-lg-4" style="text-align: center;">
-          <button type="submit" class="btn btn-primary btn-lg user-button"><i class="fas fa-user-graduate"></i> &nbsp; STUDENT LOGIN/SIGNUP</button>
-        </div>
-      </form>
-      
-      <div class="col-lg-4" style="text-align: center;">
-        <button type="submit" class="btn btn-primary btn-lg user-button"><i class="fas fa-user-cog"></i> &nbsp; ADMIN LOGIN/SIGNUP</button>
+    <div class="front-section">
+      <div class="main-title">
+          <h2 class="main-heading">Attendance Manager</h2>
+          <h3>A solution for both teachers and students!</h3>
       </div>
 
-    </div>
-    <h4 class="open-source"><br><br>This is an open source project! View the code or contribute <a href="https://github.com/HarshKapadia2/attendance_management" style="color: orange;">here</a>!</h4>
-  </section>
-  <br><br><br><br><br><br>
-
-  <section id="authors">
-  <div class="main main-raised">
-    <div class="container">
-      <div class="section text-center">
-        <h2 class="title-author">Here is our team</h2>
-        <div class="team">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="team-player">
-                <div class="card card-plain">
-                  <div class="col-md-6 ml-auto mr-auto author-img">
-                    <img src="../static/img/harsh_kapadia_img.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
-                  </div>
-                  <h4 class="card-title">Harsh Kapadia<br>
-                    <!-- <small class="card-description text-muted">Model</small> -->
-                  </h4>
-                  <div class="card-footer justify-content-center">
-                    <a href="https://www.linkedin.com/in/harsh-kapadia-426999175/" class="btn btn-link btn-just-icon"><i class="fa fa-linkedin"></i></a>
-                    <a href="https://twitter.com/harshgkapadia" class="btn btn-link btn-just-icon"><i class="fa fa-twitter"></i></a>
-                    <a href="https://github.com/HarshKapadia2" class="btn btn-link btn-just-icon"><i class="fa fa-github"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="team-player">
-                <div class="card card-plain">
-                  <div class="col-md-6 ml-auto mr-auto author-img">
-                    <img src="../static/img/saikiran_jakkan_img.png" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
-                  </div>
-                  <h4 class="card-title">Saikiran Jakkan<br>
-                    <!-- <small class="card-description text-muted">Model</small> -->
-                  </h4>
-                  <div class="card-footer justify-content-center">
-                    <a href="https://www.linkedin.com/in/saikiran-jakkan-939b2a190/" class="btn btn-link btn-just-icon"><i class="fa fa-linkedin"></i></a>
-                    <a href="https://twitter.com/saiki_93" class="btn btn-link btn-just-icon"><i class="fa fa-twitter"></i></a>
-                    <a href="https://github.com/SaikiranJakkan" class="btn btn-link btn-just-icon"><i class="fa fa-github"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <div class="login-signup">
+          <div>
+              <form action="/teacher/login" method="GET">
+                  <button type="submit" class="button"><svg class="bi bi-person-circle" width="1.4em" height="1.4em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
+                      <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                      <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
+                  </svg>&nbsp; TEACHER LOGIN/SIGNUP</button>
+              </form>
           </div>
-        </div>
+
+          <div>
+              <form action="/student/login" method="GET">
+                  <button type="submit" class="button"><svg class="bi bi-person-circle" width="1.4em" height="1.4em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
+                      <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                      <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
+                  </svg>&nbsp; STUDENT LOGIN/SIGNUP</button>
+              </form>
+          </div>
+
+          <div>
+              <form action="/admin/login" method="GET">
+                  <button type="submit" class="button"><svg class="bi bi-person-circle" width="1.4em" height="1.4em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
+                      <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                      <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
+                  </svg>&nbsp; ADMIN LOGIN/SIGNUP</button>
+              </form>
+          </div>
       </div>
-    </div>
-  </div>
-  </section>
+
+      <div class="open-source">
+          <h4>This is an open source project! View the code or contribute <a href="https://github.com/HarshKapadia2/attendance_management" target="_blank" style="color: orange;">here</a>!</h4>
+      <div>
+  	</div>
+  
+		<div class="authors">
+				<div class="author-title">
+						<h3>Here is our team</h3>
+				</div>
+				<div class="author-cards">
+						<div class="card card-1">
+								<img src="../static/img/HarshKapadia.jpg" alt="Harsh" style="width:100%">
+								<h2 class="author-name">Harsh Kapadia</h2>
+								<a href="https://www.linkedin.com/in/harsh-kapadia-426999175/" target="_blank"><i class="fa fa-linkedin fa-lg"></i></a> &nbsp;&nbsp;&nbsp;&nbsp;
+								<a href="https://twitter.com/harshgkapadia" target="_blank"><i class="fa fa-twitter fa-lg"></i></a> &nbsp;&nbsp;&nbsp;&nbsp;
+								<a href="https://github.com/HarshKapadia2" target="_blank"><i class="fa fa-github fa-lg"></i></a>
+						</div>
+
+						<div class="card">
+								<img src="../static/img/SaikiranJakkan.png" alt="Saikiran" style="width:100%">
+								<h2 class="author-name">Saikiran Jakkan</h2>
+								<a href="https://www.linkedin.com/in/saikiran-jakkan-939b2a190/" target="_blank"><i class="fa fa-linkedin fa-lg"></i></a> &nbsp;&nbsp;&nbsp;&nbsp;
+								<a href="https://twitter.com/saiki_93" target="_blank"><i class="fa fa-twitter fa-lg"></i></a> &nbsp;&nbsp;&nbsp;&nbsp;
+								<a href="https://github.com/SaikiranJakkan" target="_blank"><i class="fa fa-github fa-lg"></i></a>
+						</div>
+				</div>        
+		</div>
 {% endblock %}
