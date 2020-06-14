@@ -9,12 +9,15 @@ from admin.admin import admin
 
 app = Flask(__name__)
 
-app.secret_key = '' # for flask session.
+app.secret_key = '' # for flask session
 
+# register blueprints (code splitting)
 app.register_blueprint(init)
 app.register_blueprint(teacher, url_prefix='/teacher')
 app.register_blueprint(student, url_prefix='/student')
 app.register_blueprint(admin, url_prefix='/admin')
+
+
 
 @app.route('/', methods = ['GET'])
 def home_page():

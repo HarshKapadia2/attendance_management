@@ -5,9 +5,7 @@ import pyrebase
 
 db = firestore.client()
 
-# pyrebase init
-# Your web app's Firebase configuration
-
+# The web app's Firebase configuration
 firebaseConfig = {
   'apiKey': "",
   'authDomain': "",
@@ -17,13 +15,15 @@ firebaseConfig = {
   'messagingSenderId': "",
   'appId': "",
   'measurementId': ""
-  }
- 
+}
 
+# Initialize Firebase
 firebase = pyrebase.initialize_app(firebaseConfig)
 auth = firebase.auth()
 
 admin = Blueprint('admin', __name__, static_folder='../static', template_folder='templates')
+
+
 
 @admin.route('/login', methods=['GET'])
 def login():
