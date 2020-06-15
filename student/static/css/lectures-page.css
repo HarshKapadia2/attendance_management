@@ -1,0 +1,106 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+a {
+    text-decoration: none; 
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: #cae8d5;
+}
+
+
+/* Navigation Bar */
+
+.navbar {
+    height: 9vh;
+    background-color: #3b6978;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-title {
+    color: white;
+    padding-top: 14px;
+    padding-left: 20px;
+    font-weight: initial;
+}
+
+
+/* Dashboard Heading */
+
+.dashboard-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+    padding: 9% 3%;
+    color: #204051;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    background-color: white;
+    width: 90%;
+    margin: auto;
+    padding-left: 4%;
+    padding-right: 1%;
+    padding-bottom: 2%;
+    border-radius: 8px;
+}
+
+h2 {
+    font-size: 25px;
+    font-weight: bold;
+    padding-top: 1.6%;
+    padding-bottom: 2.6%;
+    color: #323232;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+th, td {
+    font-size: 21px;
+    text-align: left;
+    padding: 17px;
+}
+  
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+
+/* Footer */
+
+.copyright {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 8%;
+    padding-right: 8%;
+    background-color: #cae8d5;
+}
+  
+.copyright-msg{
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #204051;
+}
