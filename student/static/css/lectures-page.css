@@ -1,6 +1,7 @@
 * {
     margin: 0%;
     padding: 0%;
+    box-sizing: border-box;
 }
 
 a {
@@ -20,14 +21,13 @@ body {
 .navbar {
     height: 9vh;
     background-color: #3b6978;
+    display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 .navbar-title {
     color: white;
-    padding-top: 14px;
-    padding-left: 20px;
+    padding-left: 2%;
     font-weight: initial;
 }
 
@@ -37,9 +37,7 @@ body {
 .dashboard-heading {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    text-align: center;
 }
 
 h1 {
@@ -87,19 +85,15 @@ tr:nth-child(even) {background-color: #f2f2f2;}
 
 /* Footer */
 
-.copyright {
+footer {
+    height: 9vh;
     display: flex;
-    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    padding-left: 8%;
-    padding-right: 8%;
-    background-color: #cae8d5;
+    text-align: center;
 }
   
 .copyright-msg{
-    text-align: center;
     font-size: 16px;
     font-weight: bold;
     color: #204051;
