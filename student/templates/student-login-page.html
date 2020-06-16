@@ -9,42 +9,32 @@
 {% block body %}
 <body>
 	<div class="navbar">
-		<h2 class="navbar-title">Attendance Manager</h1>
+		<h2 class="navbar-title">Attendance Manager</h2>
 	</div>
 	  
 	<div class="container">
 		<div class="login-card">
-			<form method="POST">
+			<form action="/student/login" method="POST">
 				<h1>Student Login</h1>
 
-				<label for="email" style="text-align: left;"><p>e-mail Address</p></label>
+				<label for="email" style="text-align: left;">e-mail Address</label>
+				<br>
 				<input id="email" type="email" name="email" required autofocus>
 
 				<div class="password-div">
-					<div>
-						<label for="password"><p>Password</p></label>
-					</div>
-					<div>
-						<a href="forgot.html">Forgot Password?</a>
-					</div>
-				</div>
-				<input id="password" type="password" name="password" required data-eye>
+					<label for="password">Password</label>
 
-				<div>
-					<button class="button">
-						Login
-					</button>
+					<a href="/forgot_password">Forgot Password?</a>
 				</div>
+				<input id="password" type="password" name="password" required>
+
+				<button class="button" type="submit">Log In</button>
 
 				<div class="account-div">
-					<div>
-						<label><p>Don't have an account?</p></label>
-					</div>
-					<div>
-						<a href="/student/signup">Create One</a>
-					</div>
+					<label>Don't have an account?</label>
+					&nbsp;
+					<a href="/student/signup">Create One</a>
 				</div>
-			
 			</form>
 		</div>
 	</div>
