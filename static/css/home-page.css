@@ -139,7 +139,7 @@ h3 {
   max-width: 270px;
   text-align: center;
   background-color: #fff;
-  padding: 2%;
+  padding: 1%;
 }
 
 img {
@@ -208,6 +208,7 @@ h4 {
 
 @media screen and (max-width:995px) {
   .card {
-    margin: 4.5%;
+    padding: 2%;
+    margin: 4%;
   }
 }
