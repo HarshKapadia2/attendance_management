@@ -91,20 +91,3 @@ h1 {
     display: flex;
     justify-content: space-between;
 }
-
-
-/* Footer */
-
-footer {
-    height: 9vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.copyright-msg{
-    font-size: 16px;
-    font-weight: bold;
-    color: #204051;
-}
