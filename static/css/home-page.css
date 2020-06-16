@@ -70,7 +70,6 @@ h3 {
 
 .login-signup {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   align-content: center;
@@ -82,7 +81,6 @@ h3 {
 
 .button {
   display: inline-block;
-  flex-direction: row;
   align-items: center;
   padding: 3%;
   margin: 3%;
@@ -124,7 +122,6 @@ h3 {
 
 .author-card {
   display: flex;
-  flex-direction: row;
   justify-content: space-evenly;
   border-radius: 30px;
   padding-top: 2%;
