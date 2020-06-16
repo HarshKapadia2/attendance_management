@@ -170,23 +170,6 @@ h4 {
 }
 
 
-/* Footer */
-
-footer {
-  height: 9vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.copyright-msg{
-  font-size: 16px;
-  font-weight: bold;
-  color: #204051;
-}
-
-
 /* Media Queries */
 
 @media screen and (max-width:650px) {
