@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block head %}
+	<title>Student Dashboard</title>
+
+	<link rel="stylesheet" type="text/css" href="{{ url_for('student.static', filename='css/dashboard-page.css') }}">
+
+	<!-- Footer CSS -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('student.static', filename='css/footer.css') }}">
+{% endblock %}
+
+{% block body %}
+<body>
+    <div class="navbar">
+        <div>
+            <h2 class="navbar-title">Attendance Manager</h1>
+        </div>
+
+        <div class="navbar-elements">
+            <form action="" method="GET">
+                <button class="navbar-buttons">
+                    Docs
+                </button>
+            </form> 
+            <form action="" method="GET">
+                <button class="navbar-buttons">
+                    Logout
+                </button>
+            </form> 
+        </div>
+    </div>
+
+    <div class="main-section">
+        <div class="dashboard-heading">
+            <h1>Student's Dashboard</h1>
+        </div>
+
+        <div class="card">
+            <h2 class="student-details">Student Details</h2>
+            <div class="attendance-options">
+                <div>
+                    <form action="" method="GET">
+                        <button type="submit" class="button">Lectures</button>
+                    </form>
+                </div>
+
+                <div>
+                    <form action="" method="GET">
+                        <button type="submit" class="button">Practicals</button>
+                    </form>
+                </div>
+
+                <div>
+                    <form action="" method="GET">
+                        <button type="submit" class="button">Combined</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
