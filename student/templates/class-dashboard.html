@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+
+{% block head %}
+	<title>Class Dashboard</title>
+
+	<link rel="stylesheet" type="text/css" href="{{ url_for('student.static', filename='css/class-dashboard.css') }}">
+
+	<!-- Footer CSS -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('student.static', filename='css/footer.css') }}">
+{% endblock %}
+
+{% block body %}
+<body>
+    <div class="navbar">
+        <div>
+            <h2 class="navbar-title">Attendance Manager</h1>
+        </div>
+
+        <div class="navbar-elements">
+            <button class="navbar-buttons">
+                Docs
+            </button>
+            <button class="navbar-buttons">
+                Logout
+            </button>
+        </div>
+    </div>
+
+    <div class="main-section">
+        <div class="dashboard-heading">
+            <h1>Class Dashboard</h1>
+        </div>
+
+        <div class="card">    
+            <h2 class="class-details">Class Details</h2>
+            <div class="button-elements">
+                <form action="" method="GET">
+                    <button class="button">
+                        Add/Edit Lecture
+                    </button>
+                </form> 
+                <form action="" method="GET">
+                    <button class="button">
+                        Delete Lecture
+                    </button>
+                </form>
+                <form action="" method="GET">
+                    <button class="button">
+                        Calculate Defaulter
+                    </button>
+                </form>  
+            </div>
+
+            <h2 class="class-details">Lectures Conducted :</h2>
+            <div style="overflow-x:auto;">
+                <table>
+                    <tr>
+                        <th>Roll No.</th>
+                        <th>Name</th> 
+                        <th>Lecture Attended</th>
+                        <th>Percentage</th>
+                        <th>19/6/2020<br>(3-4pm)
+                        <th>20/6/2020<br>(3-4pm)
+                        <th>21/6/2020<br>(8-9am)
+                        </th>
+                    </tr>
+                    
+                    <tr>
+                        <td>1</td>
+                        <td>ABCD</td>
+                        <td>5</td>
+                        <td>50%</td>
+                        <td><input type="checkbox" disabled></td>
+                        <td><input type="checkbox" disabled></td>
+                        <td><input type="checkbox" disabled></td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>EFGH</td>
+                        <td>6</td>
+                        <td>60%</td>
+                        <td><input type="checkbox" disabled></td>
+                        <td><input type="checkbox" disabled></td>
+                        <td><input type="checkbox" disabled></td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>XYZ</td>
+                        <td>7</td>
+                        <td>70%</td>
+                        <td><input type="checkbox" disabled></td>
+                        <td><input type="checkbox" disabled></td>
+                        <td><input type="checkbox" disabled></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

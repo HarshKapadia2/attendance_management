@@ -52,13 +52,6 @@ body {
 }
 
 
-/* Main Section */
-
-.main-section {
-    height: 81vh;
-}
-
-
 /* Dashboard Heading */
 
 .dashboard-heading {
@@ -85,7 +78,15 @@ h1 {
     border-radius: 8px;
 }
 
-.attendance-options {
+.class-details {
+    font-size: 25px;
+    font-weight: bold;
+    padding-top: 1.6%;
+    padding-bottom: 2.6%;
+    color: #323232;
+}
+
+.button-elements {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -95,22 +96,14 @@ h1 {
     padding-bottom: 5%;
 }
 
-.student-details {
-    font-size: 25px;
-    font-weight: bold;
-    padding-top: 1.6%;
-    padding-bottom: 2.6%;
-    color: #323232;
-}
-
 .button {
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 4% 9%;
     margin: 3%;
-    font-size: 27px;
     cursor: pointer;
+    font-size: 16px;
     text-align: center;
     text-decoration: none;
     outline: none;
@@ -119,7 +112,7 @@ h1 {
     border: none;
     border-radius: 11px;
     box-shadow: 0 9px #999;
-  }
+}
   
 .button:hover {
     background-color:#0e9aa7
@@ -130,6 +123,19 @@ h1 {
     box-shadow: 0 5px #666;
     transform: translateY(4px);
 }
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+th, td {
+    font-size: 21px;
+    text-align: center;
+    padding: 17px;
+}
+  
+tr:nth-child(even) {background-color: #f2f2f2;}
 
 
 /* Media Queries */
