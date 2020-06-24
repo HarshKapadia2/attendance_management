@@ -1,0 +1,24 @@
+/* Main Section */
+
+.details {
+    flex: 0.1;
+}
+
+.attendance-options {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    flex: 1;
+}
+
+.button {
+    padding: 4% 9%;
+    font-size: 27px;
+    cursor: pointer;
+    color: #fff;
+    background-color:#1b6ca8;
+    border: none;
+    border-radius: 11px;
+    box-shadow: 0 9px #999;
+}
