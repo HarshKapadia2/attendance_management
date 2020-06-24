@@ -3,10 +3,16 @@
 {% block head %}
 	<title>Student Dashboard</title>
 
-	<link rel="stylesheet" type="text/css" href="{{ url_for('student.static', filename='css/dashboard-page.css') }}">
-
-	<!-- Footer CSS -->
-	<link rel="stylesheet" type="text/css" href="{{ url_for('student.static', filename='css/footer.css') }}">
+	<!-- Base CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('student.static', filename='css/templates/base.css') }}">
+    <!-- Navbar CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('student.static', filename='css/templates/navbar.css') }}">
+    <!-- Main section CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('student.static', filename='css/templates/main-section.css') }}">
+    <!-- Footer CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('student.static', filename='css/templates/footer.css') }}">
+    <!-- Custom CSS for page -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('student.static', filename='css/custom/dashboard-page.css') }}">
 {% endblock %}
 
 {% block body %}
@@ -31,7 +37,7 @@
         </div>
 
         <div class="card">
-            <h2 class="student-details">Student Details</h2>
+            <h2 class="details">Student Details</h2>
 
             <div class="attendance-options">
                 <form action="/student/lectures" method="GET">

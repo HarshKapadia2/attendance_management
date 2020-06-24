@@ -3,10 +3,16 @@
 {% block head %}
 	<title>Student's Lectures</title>
 
-    <link rel="stylesheet" type="text/css" href="{{ url_for('student.static', filename='css/lectures-page.css') }}">
-    
+    <!-- Base CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('student.static', filename='css/templates/base.css') }}">
+    <!-- Navbar CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('student.static', filename='css/templates/navbar.css') }}">
+    <!-- Main section CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('student.static', filename='css/templates/main-section.css') }}">
+    <!-- Table CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('student.static', filename='css/templates/table.css') }}">
     <!-- Footer CSS -->
-	<link rel="stylesheet" type="text/css" href="{{ url_for('student.static', filename='css/footer.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('student.static', filename='css/templates/footer.css') }}">
 {% endblock %}
 
 {% block body %}
