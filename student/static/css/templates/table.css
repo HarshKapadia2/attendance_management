@@ -1,0 +1,29 @@
+.table-overflow {
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+th, td {
+    font-size: 21px;
+    text-align: center;
+    padding: 17px;
+}
+
+input[type=checkbox] {
+    transform: scale(1.5);
+}
+  
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+@media screen and (max-width: 900px) {
+    th, td {
+        padding: 8px;
+    }
+}
