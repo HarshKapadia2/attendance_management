@@ -4,7 +4,7 @@
    A web app for teachers and students to manage their attendance.
    <br />
    <br />
-   <a href="#"><img alt="Version" src="https://img.shields.io/badge/version-1.0.1-green?style=flat"></a>
+   <a href="#"><img alt="Version" src="https://img.shields.io/badge/version-1-green?style=flat"></a>
    <a href="https://github.com/HarshKapadia2/attendance_management/blob/master/CONTRIBUTING.md"><img alt="Contributions Welcome" src="https://img.shields.io/badge/contributions-welcome-green?style=flat"></a>
    <br />
    <br />
@@ -12,6 +12,8 @@
    <br />
    <i>Use the <a href="https://github.com/HarshKapadia2/attendance_management/blob/master/sample_log_in_details.md">sample_log_in_details.md</a> file to explore the hosted webapp.</i>
    <br />
+   <br />
+   <b>NOTE: Version 2 of this web app is under development in the 'v2' branch.</b>
    <br />
    For any suggestion(s) or/and problem(s), please do not hesitate to open an <a href="https://github.com/HarshKapadia2/attendance_management/issues">issue</a>!
 </p>
