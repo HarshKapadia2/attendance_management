@@ -32,41 +32,48 @@ body {
 }
 
 
-/* Dashboard Heading */
+/* Main section */
+
+.main-section {
+    height: 82vh;
+}
 
 .dashboard-heading {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    text-align: center;
+    height: 20vh;
 }
 
 h1 {
     font-size: 40px;
     font-weight: bold;
-    padding: 9% 3%;
     color: #204051;
 }
 
 .card {
+    height: 62vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    text-align: left;
     background-color: white;
     width: 90%;
     margin: auto;
-    padding-left: 4%;
-    padding-right: 1%;
-    padding-bottom: 2%;
+    padding: 4%;
     border-radius: 8px;
 }
 
 h2 {
     font-size: 25px;
     font-weight: bold;
-    padding-top: 1.6%;
-    padding-bottom: 2.6%;
+    padding-bottom: 2%;
     color: #323232;
+}
+
+.table-overflow {
+    overflow-x: auto;
+    overflow-y: auto;
 }
 
 table {
@@ -76,25 +83,19 @@ table {
   
 th, td {
     font-size: 21px;
-    text-align: left;
+    text-align: center;
     padding: 17px;
 }
   
-tr:nth-child(even) {background-color: #f2f2f2;}
-
-
-/* Footer */
-
-footer {
-    height: 9vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+tr:nth-child(even) {
+    background-color: #f2f2f2;
 }
-  
-.copyright-msg{
-    font-size: 16px;
-    font-weight: bold;
-    color: #204051;
+
+
+/* Media queries */
+
+@media screen and (max-width: 900px) {
+    th, td {
+        padding: 8px;
+    }
 }

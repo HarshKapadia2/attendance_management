@@ -3,55 +3,69 @@
 {% block head %}
 	<title>Student's Lectures</title>
 
-	<link rel="stylesheet" type="text/css" href="{{ url_for('student.static', filename='css/lectures-page.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('student.static', filename='css/lectures-page.css') }}">
+    
+    <!-- Footer CSS -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('student.static', filename='css/footer.css') }}">
 {% endblock %}
 
 {% block body %}
 <body>
     <div class="navbar">
-        <h2 class="navbar-title">Attendance Manager</h1>
-    </div>
+		<h2 class="navbar-title">Attendance Manager</h2>
+	</div>
 
-    <div class="dashboard-heading">
-        <h1>Student's Lectures</h1>
-    </div>
+    <div class="main-section">
+        <div class="dashboard-heading">
+            <h1>Student's Lectures</h1>
+        </div>
 
-    <div class="card">
-        <h2>Student Details</h2>
-        <div style="overflow-x:auto;">
-            <table>
-                <tr>
-                    <th>Subject</th>
-                    <th>Teacher</th>
-                    <th>Lecture Conducted</th>
-                    <th>Lecture Attended</th>
-                    <th>Percentage</th>
-                </tr>
-                
-                <tr>
-                    <td>Automata Theory</td>
-                    <td>Kumkum Saxena</td>
-                    <td>26</td>
-                    <td>19</td>
-                    <td>73.07%</td>
-                </tr>
+        <div class="card">
+            <h2>Student Details</h2>
 
-                <tr>
-                    <td>Operating System</td>
-                    <td>Shachi Natu</td>
-                    <td>30</td>
-                    <td>26</td>
-                    <td>86.67%</td>
-                </tr>
+            <div class="table-overflow">
+                <table>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Teacher</th>
+                        <th>Lecture Conducted</th>
+                        <th>Lecture Attended</th>
+                        <th>Percentage</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Automata Theory</td>
+                        <td>Kumkum Saxena</td>
+                        <td>26</td>
+                        <td>19</td>
+                        <td>73.07%</td>
+                    </tr>
 
-                <tr>
-                    <td>Computer Networks</td>
-                    <td>Vijal Jain</td>
-                    <td>30</td>
-                    <td>26</td>
-                    <td>86.67%</td>
-                </tr>
-            </table>
+                    <tr>
+                        <td>Operating System</td>
+                        <td>Shachi Natu</td>
+                        <td>30</td>
+                        <td>26</td>
+                        <td>86.67%</td>
+                    </tr>
+
+                    <tr>
+                        <td>Computer Networks</td>
+                        <td>Vijal Jain</td>
+                        <td>30</td>
+                        <td>26</td>
+                        <td>86.67%</td>
+                    </tr>
+
+                    <tr>
+                        <td>Computer Networks</td>
+                        <td>Vijal Jain</td>
+                        <td>30</td>
+                        <td>26</td>
+                        <td>86.67%</td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </div>
 {% endblock %}
