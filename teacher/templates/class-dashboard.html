@@ -1,28 +1,56 @@
-{% extends 'base.html' %}
+{% extends 'teacher/base.html' %}
 
 {% block head %}
 	<title>Class Dashboard</title>
-
-	<link rel="stylesheet" type="text/css" href="{{ url_for('student.static', filename='css/class-dashboard.css') }}">
-
-	<!-- Footer CSS -->
-	<link rel="stylesheet" type="text/css" href="{{ url_for('student.static', filename='css/footer.css') }}">
+    
+    <!-- Base CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('teacher.static', filename='css/templates/base.css') }}">
+    <!-- Navbar CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('teacher.static', filename='css/templates/navbar.css') }}">
+    <!-- Main section CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('teacher.static', filename='css/templates/main-section.css') }}">
+    <!-- Table CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('teacher.static', filename='css/templates/table.css') }}">
+    <!-- Footer CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('teacher.static', filename='css/templates/footer.css') }}">
+    <!-- Custom CSS for page -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('teacher.static', filename='css/custom/class-dashboard.css') }}">
+    
+    <!-- Burger navbar JS -->
+    <script async src="{{ url_for('teacher.static', filename='js/navbar-burger.js') }}"></script>
 {% endblock %}
 
 {% block body %}
 <body>
     <div class="navbar">
-        <div>
-            <h2 class="navbar-title">Attendance Manager</h1>
-        </div>
+        <h2 class="navbar-title">Attendance Manager</h2>
 
         <div class="navbar-elements">
-            <button class="navbar-buttons">
-                Docs
-            </button>
-            <button class="navbar-buttons">
-                Logout
-            </button>
+            <form action="" method="GET">
+                <button class="navbar-buttons long-navbar-buttons">Add/Edit Lecture</button>
+            </form>
+            
+            <form action="" method="GET">
+                <button class="navbar-buttons long-navbar-buttons">Delete Lecture</button>
+            </form>
+            
+            <form action="" method="GET">
+                <button class="navbar-buttons long-navbar-buttons">Calculate Defaulter</button>
+            </form>
+
+            <form action="" method="GET">
+                <button href="" class="navbar-buttons">Docs</button>
+            </form>
+
+            <form action="" method="GET">
+                <button href="" class="navbar-buttons">Log Out</button>
+            </form>
+        </div>
+
+        <div class="burger">
+            <div class="line-1"></div>
+            <div class="line-2"></div>
+            <div class="line-3"></div>
         </div>
     </div>
 
@@ -33,36 +61,19 @@
 
         <div class="card">    
             <h2 class="class-details">Class Details</h2>
-            <div class="button-elements">
-                <form action="" method="GET">
-                    <button class="button">
-                        Add/Edit Lecture
-                    </button>
-                </form> 
-                <form action="" method="GET">
-                    <button class="button">
-                        Delete Lecture
-                    </button>
-                </form>
-                <form action="" method="GET">
-                    <button class="button">
-                        Calculate Defaulter
-                    </button>
-                </form>  
-            </div>
 
-            <h2 class="class-details">Lectures Conducted :</h2>
-            <div style="overflow-x:auto;">
+            <h2 class="class-details">Lectures Conducted:</h2>
+
+            <div class="table-overflow">
                 <table>
                     <tr>
                         <th>Roll No.</th>
                         <th>Name</th> 
-                        <th>Lecture Attended</th>
+                        <th>Lectures Attended</th>
                         <th>Percentage</th>
-                        <th>19/6/2020<br>(3-4pm)
-                        <th>20/6/2020<br>(3-4pm)
-                        <th>21/6/2020<br>(8-9am)
-                        </th>
+                        <th>19/6/2020<br>(3-4pm)</th>
+                        <th>20/6/2020<br>(3-4pm)</th>
+                        <th>21/6/2020<br>(8-9am)</th>
                     </tr>
                     
                     <tr>
@@ -71,7 +82,7 @@
                         <td>5</td>
                         <td>50%</td>
                         <td><input type="checkbox" disabled></td>
-                        <td><input type="checkbox" disabled></td>
+                        <td><input type="checkbox" disabled checked></td>
                         <td><input type="checkbox" disabled></td>
                     </tr>
 
@@ -80,8 +91,8 @@
                         <td>EFGH</td>
                         <td>6</td>
                         <td>60%</td>
-                        <td><input type="checkbox" disabled></td>
-                        <td><input type="checkbox" disabled></td>
+                        <td><input type="checkbox" disabled checked></td>
+                        <td><input type="checkbox" disabled checked></td>
                         <td><input type="checkbox" disabled></td>
                     </tr>
 
@@ -92,7 +103,25 @@
                         <td>70%</td>
                         <td><input type="checkbox" disabled></td>
                         <td><input type="checkbox" disabled></td>
+                        <td><input type="checkbox" disabled checked></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>XYZ</td>
+                        <td>7</td>
+                        <td>70%</td>
+                        <td><input type="checkbox" disabled checked></td>
                         <td><input type="checkbox" disabled></td>
+                        <td><input type="checkbox" disabled checked></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>XYZ</td>
+                        <td>7</td>
+                        <td>70%</td>
+                        <td><input type="checkbox" disabled></td>
+                        <td><input type="checkbox" disabled></td>
+                        <td><input type="checkbox" disabled checked></td>
                     </tr>
                 </table>
             </div>
