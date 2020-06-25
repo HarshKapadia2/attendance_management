@@ -25,12 +25,7 @@ teacher = Blueprint('teacher', __name__, static_folder='static', template_folder
 
 
 
-@teacher.route('/login', methods=['GET'])
-def login():
+@teacher.route('/class_dashboard', methods=['GET'])
+def classDashboard():
   if request.method == 'GET':
-    return render_template('teacher-login-page.html')
-
-@teacher.route('/signup', methods=['GET'])
-def signup():
-  if request.method == 'GET':
-    return render_template('teacher-signup-page.html')
+    return render_template('class-dashboard.html')
