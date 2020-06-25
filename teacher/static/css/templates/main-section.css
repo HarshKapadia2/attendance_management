@@ -1,0 +1,39 @@
+.main-section {
+    height: 82vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 20vh;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.card {
+    background-color: white;
+    width: 90%;
+    margin: auto;
+    padding: 4%;
+    border-radius: 8px;
+    height: 62vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 4px 5px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.details {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 1% 0;
+}

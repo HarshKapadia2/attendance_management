@@ -1,0 +1,13 @@
+/* Navigation Bar */
+
+.navbar-elements {
+    flex: 1;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1220px) {
+    .navbar-title {
+        flex: 0.5;
+    }
+}
