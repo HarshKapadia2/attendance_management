@@ -39,3 +39,8 @@ def signup():
 def dashboard():
   if request.method == 'GET':
     return render_template('student-dashboard-page.html')
+
+@student.route('/lectures', methods=['GET'])
+def lectures():
+  if request.method == 'GET':
+    return render_template('student-lectures-page.html')
