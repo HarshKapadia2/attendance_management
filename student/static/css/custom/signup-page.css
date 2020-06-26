@@ -25,3 +25,13 @@ h1 {
     display: flex;
     margin-top: 5%;
 }
+
+
+/* Media queries */
+
+@media screen and (max-width: 600px) {
+    .signup-card {
+        margin: 2%;
+        padding: 5%;
+    }
+}

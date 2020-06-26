@@ -31,3 +31,13 @@ h1 {
     display: flex;
     justify-content: space-between;
 }
+
+
+/* Media queries */
+
+@media screen and (max-width: 600px) {
+    .login-card {
+        margin: 2%;
+        padding: 5%;
+    }
+}
