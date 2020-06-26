@@ -13,12 +13,31 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('student.static', filename='css/templates/footer.css') }}">
     <!-- Custom CSS for page -->
 	<link rel="stylesheet" type="text/css" href="{{ url_for('student.static', filename='css/custom/login-page.css') }}">
+
+	<!-- Burger navbar JS -->
+    <script async src="{{ url_for('student.static', filename='js/navbar-burger.js') }}"></script>
 {% endblock %}
 
 {% block body %}
 <body>
 	<div class="navbar">
 		<h2 class="navbar-title">Attendance Manager</h2>
+
+		<div class="navbar-elements">
+			<form action="/" method="GET">
+                <button class="navbar-buttons">Home</button>
+			</form>
+			
+			<form action="" method="GET">
+                <button class="navbar-buttons">Docs</button>
+			</form>
+		</div>
+
+		<div class="burger">
+            <div class="line-1"></div>
+            <div class="line-2"></div>
+            <div class="line-3"></div>
+        </div>
 	</div>
 	  
 	<div class="main-section">

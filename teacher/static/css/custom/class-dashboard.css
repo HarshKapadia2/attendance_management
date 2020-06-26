@@ -1,13 +1,9 @@
 /* Navigation Bar */
 
-.navbar-elements {
-    flex: 1;
+.navbar-title {
+    flex: 0.5;
 }
 
-/* Media Queries */
-
-@media screen and (max-width: 1220px) {
-    .navbar-title {
-        flex: 0.5;
-    }
+.navbar-elements {
+    flex: 1;
 }

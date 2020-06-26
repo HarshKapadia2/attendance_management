@@ -8,9 +8,7 @@
    <a href="https://github.com/HarshKapadia2/attendance_management/blob/master/CONTRIBUTING.md"><img alt="Contributions Welcome" src="https://img.shields.io/badge/contributions-welcome-green?style=flat"></a>
    <br />
    <br />
-   <b>Hosted at </b><a href="https://attendance-management-flask.herokuapp.com/"><b>https://attendance-management-flask.herokuapp.com/</b></a>
-   <br />
-   <i>Use the <a href="https://github.com/HarshKapadia2/attendance_management/blob/master/sample_log_in_details.md">sample_log_in_details.md</a> file to explore the hosted webapp.</i>
+   <b>NOTE: Version 2 is currently in development. Version 1 in the master branch is the currently deployed version.</b>
    <br />
    <br />
    For any suggestion(s) or/and problem(s), please do not hesitate to open an <a href="https://github.com/HarshKapadia2/attendance_management/issues">issue</a>!
