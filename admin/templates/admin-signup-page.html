@@ -1,0 +1,65 @@
+{% extends 'admin/base.html' %}
+
+{% block head %}
+	<title>Admin Signup</title>
+
+	<!-- Base CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('admin.static', filename='css/templates/base.css') }}">
+    <!-- Navbar CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('admin.static', filename='css/templates/navbar.css') }}">
+    <!-- Main section CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('admin.static', filename='css/templates/main-section.css') }}">
+    <!-- Footer CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('admin.static', filename='css/templates/footer.css') }}">
+    <!-- Custom CSS for page -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('admin.static', filename='css/custom/signup-page.css') }}">
+
+	<!-- Burger navbar JS -->
+    <script async src="{{ url_for('admin.static', filename='js/navbar-burger.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+<body>
+	<div class="navbar">
+		<h2 class="navbar-title">Attendance Manager</h2>
+
+		<div class="navbar-elements">
+			<form action="/" method="GET">
+                <button class="navbar-buttons">Home</button>
+			</form>
+			
+			<form action="" method="GET">
+                <button class="navbar-buttons">Docs</button>
+			</form>
+		</div>
+
+		<div class="burger">
+            <div class="line-1"></div>
+            <div class="line-2"></div>
+            <div class="line-3"></div>
+        </div>
+	</div>
+	  
+	<div class="main-section">
+		<div class="signup-card">
+			<form action="/admin/signup" method="POST">
+				<h1>Admin Signup</h1>
+
+				<label for="email">e-mail Address</label>
+				<input id="email" type="email" name="email" required autofocus>
+
+				<div class="password-div">
+					<label for="password">Password</label>
+				</div>
+				<input id="password" type="password" name="password" required>
+
+				<div class="password-div">
+					<label for="password">Re-type Password</label>
+				</div>
+				<input id="password1" type="password" name="password" required>
+
+				<button class="button" type="submit">Create Account</button>
+			</form>
+		</div>
+	</div>
+{% endblock %}
