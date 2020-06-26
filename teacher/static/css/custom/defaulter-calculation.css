@@ -1,0 +1,39 @@
+input {
+    height: 35px;
+    width: 40%;
+}
+
+.date-range {
+    display: flex;
+}
+
+.start-date {
+    display: flex;
+    flex: 1;
+}
+
+.end-date {
+    display: flex;
+    flex: 1;
+}
+
+.submit-button {
+    display: flex;
+    justify-content: center;
+}
+
+#submit {
+    display: inline-block;
+    width: 16%;
+    padding: 1%;
+    background-color:#1b6ca8;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+#submit:hover {
+    background-color:#0e9aa7;
+}

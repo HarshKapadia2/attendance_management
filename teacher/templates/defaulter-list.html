@@ -1,0 +1,89 @@
+{% extends 'teacher/base.html' %}
+
+{% block head %}
+	<title>Defaulter List</title>
+    
+    <!-- Base CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('teacher.static', filename='css/templates/base.css') }}">
+    <!-- Navbar CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('teacher.static', filename='css/templates/navbar.css') }}">
+    <!-- Main section CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('teacher.static', filename='css/templates/main-section.css') }}">
+    <!-- Table CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('teacher.static', filename='css/templates/table.css') }}">
+    <!-- Footer CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('teacher.static', filename='css/templates/footer.css') }}">
+    <!-- Custom CSS for page -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('teacher.static', filename='css/custom/defaulter-list.css') }}">
+    
+    <!-- Burger navbar JS -->
+    <script async src="{{ url_for('teacher.static', filename='js/navbar-burger.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+<body>
+    <div class="navbar">
+        <h2 class="navbar-title">Attendance Manager</h2>
+        <div class="navbar-elements">
+            <form action="" method="GET">
+                <button href="" class="navbar-buttons">Docs</button>
+            </form>
+
+            <form action="" method="GET">
+                <button href="" class="navbar-buttons">Log Out</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="main-section">
+        <div class="dashboard-heading">
+            <h1>Defaulter List</h1>
+        </div>
+
+        <div class="card">
+            <h2>Class & Subject Details</h2>
+            <h2>Attendance Criteria Percentage : </h2>
+            <h2>Date Range : __-__-____ to __-__-____</h2>
+            <h2>Lectures Conducted :</h2>
+            <div style="overflow-x:auto;">
+                <table>
+                    <tr>
+                        <th>Roll No.</th>
+                        <th>Name</th> 
+                        <th>Lecture Attended</th>
+                        <th>Percentage</th>
+                        </th>
+                    </tr>
+                    
+                    <tr>
+                        <td>1</td>
+                        <td>ABCD</td>
+                        <td>5</td>
+                        <td>50%</td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>EFGH</td>
+                        <td>6</td>
+                        <td>60%</td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>XYZ</td>
+                        <td>7</td>
+                        <td>70%</td>
+                    </tr>    
+                </table>
+            </div>
+            <div class="generate-pdf">
+                <form action="" method="GET">
+                    <button class="button">
+                        Generate PDF
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

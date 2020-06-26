@@ -1,0 +1,68 @@
+{% extends 'teacher/base.html' %}
+
+{% block head %}
+	<title>Defaulter Calculation</title>
+    
+    <!-- Base CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('teacher.static', filename='css/templates/base.css') }}">
+    <!-- Navbar CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('teacher.static', filename='css/templates/navbar.css') }}">
+    <!-- Main section CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('teacher.static', filename='css/templates/main-section.css') }}">
+    <!-- Footer CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('teacher.static', filename='css/templates/footer.css') }}">
+    <!-- Custom CSS for page -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('teacher.static', filename='css/custom/defaulter-calculation.css') }}">
+    
+    <!-- Burger navbar JS -->
+    <script async src="{{ url_for('teacher.static', filename='js/navbar-burger.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+<body>
+    <div class="navbar">
+        <h2 class="navbar-title">Attendance Manager</h2>
+        <div class="navbar-elements">
+            <form action="" method="GET">
+                <button href="" class="navbar-buttons">Docs</button>
+            </form>
+
+            <form action="" method="GET">
+                <button href="" class="navbar-buttons">Log Out</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="main-section">
+        <div class="dashboard-heading">
+            <h1>Defaulter Calculation</h1>
+        </div>
+
+        <div class="card">
+            <h2>Class & Subject Details</h2> <br><br>
+            <h3>Note: Select from the below three options</h3>
+            <h3>1. Enter the attendance criteria percentage</h3>
+            <h3>2. Enter the date range</h3>
+            <h3>3. Enter both attendance criteria % and date range</h3> <br><br>
+            
+            <form action="" method="POST">
+                <label for="attendance-criteria"><h2>Enter the Attendance Criteria Percentage:</h2></label>
+                <input type="number" required autofocus> <br><br>
+                <h2>Date Range :</h2>
+                <div class="date-range">
+                    <div class="start-date">
+                        <label for="start-date"><h2>Enter the starting date: &nbsp; </h2></label>
+                        <input type="date" id="start-date" name="start-date" required>
+                    </div> 
+                    <div class="end-date">
+                        <label for="end-date"><h2>Enter the ending date: &nbsp; </h2></label>
+                        <input type="date" id="end-date" name="end-date" required><br>
+                    </div>
+                </div> <br><br>
+                <div class="submit-button">
+                    <input type="submit" id="submit">
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
