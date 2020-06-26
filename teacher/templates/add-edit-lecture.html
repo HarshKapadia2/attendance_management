@@ -1,0 +1,85 @@
+{% extends 'teacher/base.html' %}
+
+{% block head %}
+	<title>Add/Edit Lecture</title>
+    
+    <!-- Base CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('teacher.static', filename='css/templates/base.css') }}">
+    <!-- Navbar CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('teacher.static', filename='css/templates/navbar.css') }}">
+    <!-- Main section CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('teacher.static', filename='css/templates/main-section.css') }}">
+    <!-- Table CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('teacher.static', filename='css/templates/table.css') }}">
+    <!-- Footer CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('teacher.static', filename='css/templates/footer.css') }}">
+    <!-- Custom CSS for page -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('teacher.static', filename='css/custom/add-edit-lecture.css') }}">
+    
+    <!-- Burger navbar JS -->
+    <script async src="{{ url_for('teacher.static', filename='js/navbar-burger.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+<body>
+    <div class="navbar">
+        <h2 class="navbar-title">Attendance Manager</h2>
+        <div class="navbar-elements">
+            <form action="" method="GET">
+                <button href="" class="navbar-buttons">Docs</button>
+            </form>
+
+            <form action="" method="GET">
+                <button href="" class="navbar-buttons">Log Out</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="main-section">
+        <div class="dashboard-heading">
+            <h1>Add/Edit Lecture</h1>
+        </div>
+
+        <div class="card">    
+            <h2 class="class-details">Class Details</h2>
+            <div class="lecture-date">
+                <label for="date"><h2>Date: &nbsp; </h2></label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <div class="table-overflow">
+                <table>
+                    <tr>
+                        <th>Roll No.</th>
+                        <th>Name</th> 
+                        <th>Mark Attendance</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>1</td>
+                        <td>ABCD</td>
+                        <td><input type="checkbox"></td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>EFGH</td>
+                        <td><input type="checkbox"></td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>XYZ</td>
+                        <td><input type="checkbox"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="add-edit-lecture">
+                <form action="" method="GET">
+                    <button class="button">
+                        Add/Edit Lecture
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
