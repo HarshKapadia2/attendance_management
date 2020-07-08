@@ -21,7 +21,7 @@ firebaseConfig = {
 firebase = pyrebase.initialize_app(firebaseConfig)
 auth = firebase.auth()
 
-admin = Blueprint('admin', __name__, static_folder='../static', template_folder='templates')
+admin = Blueprint('admin', __name__, static_folder='static', template_folder='templates')
 
 
 
