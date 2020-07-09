@@ -24,6 +24,7 @@
 <body>
     <div class="navbar">
         <h2 class="navbar-title">Attendance Manager</h2>
+
         <div class="navbar-elements">
             <form action="" method="GET">
                 <button href="" class="navbar-buttons">Docs</button>
@@ -33,6 +34,12 @@
                 <button href="" class="navbar-buttons">Log Out</button>
             </form>
         </div>
+
+        <div class="burger">
+            <div class="line-1"></div>
+            <div class="line-2"></div>
+            <div class="line-3"></div>
+        </div>
     </div>
 
     <div class="main-section">
@@ -41,16 +48,24 @@
         </div>
 
         <div class="card">
-            <h2>Class & Subject Details</h2>
-            <h2>Attendance Criteria Percentage : </h2>
-            <h2>Date Range : __-__-____ to __-__-____</h2>
-            <h2>Lectures Conducted :</h2>
-            <div style="overflow-x:auto;">
+            <div class="col">
+                <div class="col-1">
+                    <h2>Class & Subject Details</h2>
+                    <h2>Lectures Conducted:</h2>
+                </div>
+                
+                <div class="col-2">
+                    <h2>Percentage Criteria: </h2>
+                    <h2>Date Range: __-__-____ to __-__-____</h2>
+                </div>
+            </div>
+
+            <div class="table-overflow">
                 <table>
                     <tr>
                         <th>Roll No.</th>
-                        <th>Name</th> 
-                        <th>Lecture Attended</th>
+                        <th>Name</th>
+                        <th>Lectures Attended</th>
                         <th>Percentage</th>
                         </th>
                     </tr>
@@ -77,11 +92,10 @@
                     </tr>    
                 </table>
             </div>
+
             <div class="generate-pdf">
                 <form action="" method="GET">
-                    <button class="button">
-                        Generate PDF
-                    </button>
+                    <button class="button">Generate PDF</button>
                 </form>
             </div>
         </div>

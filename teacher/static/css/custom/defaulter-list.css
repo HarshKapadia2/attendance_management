@@ -1,3 +1,17 @@
+/* Main section */
+
+.col {
+    display: flex;
+}
+
+.col-1 {
+    flex: 0.5;
+}
+
+.col-2 {
+    flex: 0.5;
+}
+
 .generate-pdf {
     display: flex;
     justify-content: flex-end;
@@ -9,6 +23,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     padding: 1% 1%;
     margin: 3%;
     cursor: pointer;
@@ -21,6 +36,8 @@
     border: none;
     border-radius: 11px;
     box-shadow: 0 9px #999;
+    width: 150px;
+    height: 30px;
 }
   
 .button:hover {
@@ -31,4 +48,30 @@
     background-color: #1b6ca8;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
+}
+
+
+/* Media queries */
+
+@media screen and (max-width: 900px) {
+    .col {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    h2 {
+        font-size: 15px;
+    }
+
+    th, td {
+        font-size: 15px;
+    }
+
+    .button {
+        font-size: 15px;
+        width: 130px;
+        height: 25px;
+        justify-content: center;
+    }
 }
