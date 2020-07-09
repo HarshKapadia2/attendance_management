@@ -22,6 +22,7 @@
 <body>
     <div class="navbar">
         <h2 class="navbar-title">Attendance Manager</h2>
+
         <div class="navbar-elements">
             <form action="" method="GET">
                 <button href="" class="navbar-buttons">Docs</button>
@@ -31,6 +32,12 @@
                 <button href="" class="navbar-buttons">Log Out</button>
             </form>
         </div>
+
+        <div class="burger">
+            <div class="line-1"></div>
+            <div class="line-2"></div>
+            <div class="line-3"></div>
+        </div>
     </div>
 
     <div class="main-section">
@@ -39,26 +46,46 @@
         </div>
 
         <div class="card">
-            <h2>Class & Subject Details</h2> <br><br>
-            <h3>Note: Select from the below three options</h3>
-            <h3>1. Enter the attendance criteria percentage</h3>
-            <h3>2. Enter the date range</h3>
-            <h3>3. Enter both attendance criteria % and date range</h3> <br><br>
+            <div class="test">
+                <h2>Class & Subject Details</h2>
+                <br>
+                <br>
+
+                <h3>Defaulter calculation criteria choices:</h3>
+                <h3>1.&nbsp; Enter only the attendance percentage criteria</h3>
+                <h3>2. Enter only the date range</h3>
+                <h3>3. Enter both, the attendance criteria % and the date range</h3>
+                <br>
+                <br>
+            </div>
             
             <form action="" method="POST">
-                <label for="attendance-criteria"><h2>Enter the Attendance Criteria Percentage:</h2></label>
-                <input type="number" required autofocus> <br><br>
-                <h2>Date Range :</h2>
+                <div class="attendance-criteria">
+                    <label for="attendance-criteria"><h2>Attendance percentage Criteria: &nbsp; </h2></label>
+                    <input type="number" min="0" max="100" autofocus>
+                </div>
+                <br>
+                <br>
+
+                
                 <div class="date-range">
-                    <div class="start-date">
-                        <label for="start-date"><h2>Enter the starting date: &nbsp; </h2></label>
-                        <input type="date" id="start-date" name="start-date" required>
-                    </div> 
-                    <div class="end-date">
-                        <label for="end-date"><h2>Enter the ending date: &nbsp; </h2></label>
-                        <input type="date" id="end-date" name="end-date" required><br>
-                    </div>
-                </div> <br><br>
+                    <h2>Date Range:</h2>
+                    &nbsp;
+                    &nbsp;
+
+                    <input type="date" id="start-date" name="start-date">
+                    &nbsp;
+                    &nbsp;
+
+                    <h2>to</h2>
+                    &nbsp;
+                    &nbsp;
+
+                    <input type="date" id="end-date" name="end-date">
+                </div>
+                <br>
+                <br>
+
                 <div class="submit-button">
                     <input type="submit" id="submit">
                 </div>

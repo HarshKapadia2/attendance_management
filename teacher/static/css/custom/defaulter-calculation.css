@@ -1,20 +1,21 @@
-input {
-    height: 35px;
-    width: 40%;
+/* Main section */
+
+input[type=date] {
+    height: 30px;
+    width: 20%;
+}
+
+input[type=number] {
+    height: 30px;
+    width: 10%;
+}
+
+.attendance-criteria {
+    display: flex;
 }
 
 .date-range {
     display: flex;
-}
-
-.start-date {
-    display: flex;
-    flex: 1;
-}
-
-.end-date {
-    display: flex;
-    flex: 1;
 }
 
 .submit-button {
@@ -36,4 +37,38 @@ input {
 
 #submit:hover {
     background-color:#0e9aa7;
+}
+
+
+/* Media queries */
+
+@media screen and (max-width: 640px) {
+    .card {
+        overflow-x: auto;
+        overflow-y: auto;
+    }
+
+    .attendance-criteria {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .date-range {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    input[type=date] {
+        width: 50%;
+    }
+    
+    input[type=number] {
+        width: 50%;
+        margin-top: 5%;
+    }
+
+    #submit {
+        width: 40%;
+        padding: 2%;
+    }
 }
