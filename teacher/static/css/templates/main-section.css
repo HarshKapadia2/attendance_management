@@ -37,3 +37,28 @@ h1 {
     font-weight: bold;
     padding: 1% 0;
 }
+
+.button {
+	display: flex;
+	align-items: center;
+	padding: 8%;
+	margin: 3%;
+	font-size: 14px;
+	cursor: pointer;
+	text-align: center;
+	color: #fff;
+	background-color:#1b6ca8;
+	border: none;
+	border-radius: 11px;
+	box-shadow: 0 9px #999;
+}
+
+.button:hover {
+	background-color:#0e9aa7
+}
+
+.button:active {
+	background-color: #1b6ca8;
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
+}
