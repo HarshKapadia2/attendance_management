@@ -23,15 +23,22 @@
 {% block body %}
 <body>
     <div class="navbar">
-        <h2 class="navbar-title">Attendance Manager</h2>
+		<h2 class="navbar-title">Attendance Manager</h2>
+		
         <div class="navbar-elements">
             <form action="" method="GET">
-                <button href="" class="navbar-buttons">Docs</button>
+                <button class="navbar-buttons">Docs</button>
             </form>
 
             <form action="" method="GET">
-                <button href="" class="navbar-buttons">Log Out</button>
+                <button class="navbar-buttons">Log Out</button>
             </form>
+		</div>
+		
+		<div class="burger">
+            <div class="line-1"></div>
+            <div class="line-2"></div>
+            <div class="line-3"></div>
         </div>
     </div>
 
@@ -41,11 +48,20 @@
         </div>
 
         <div class="card">    
-            <h2 class="class-details">Class Details</h2>
-            <div class="lecture-date">
-                <label for="date"><h2>Date: &nbsp; </h2></label>
-                <input type="date" id="date" name="date" required>
-            </div>
+			<h2 class="class-details">Class Details</h2>
+			
+			<div class="lecture-info">
+				<div class="lecture-date">
+					<label for="date">Date:&nbsp;</label>
+					<input type="date" name="date" required>
+				</div>
+
+				<div class="lecture-time">
+					<label for="time">Time:&nbsp;</label>
+					<input type="time" name="date" required>
+				</div>
+			</div>
+			
             <div class="table-overflow">
                 <table>
                     <tr>
@@ -72,12 +88,11 @@
                         <td><input type="checkbox"></td>
                     </tr>
                 </table>
-            </div>
+			</div>
+			
             <div class="add-edit-lecture">
                 <form action="" method="GET">
-                    <button class="button">
-                        Add/Edit Lecture
-                    </button>
+                    <button class="button">Add/Edit&nbsp;Lecture</button>
                 </form>
             </div>
         </div>

@@ -1,47 +1,49 @@
 .class-details {
-    padding-bottom: 2%;
+    padding-bottom: 1%;
 }
 
-input {
-    height: 35px;
-    width: 100%;
+.lecture-info {
+	display: flex;
+	width: 100%;
+	padding-bottom: 1%;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.lecture-date, .lecture-time {
+	display: flex;
+	align-items: center;
 }
 
 .lecture-date {
-    display: flex;
+	padding-right: 2%;
+}
+
+input {
+    height: 30px;
+}
+
+th, td {
+	padding: 12px;
 }
 
 .add-edit-lecture {
     display: flex;
-    justify-content: flex-end;
-    padding-top: 2%;
-    padding-right: 5%;
+    justify-content: center;
+    padding: 1%;
 }
 
-.button {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 1% 1%;
-    margin: 3%;
-    cursor: pointer;
-    font-size: 16px;
-    text-align: center;
-    text-decoration: none;
-    outline: none;
-    color: #fff;
-    background-color:#1b6ca8;
-    border: none;
-    border-radius: 11px;
-    box-shadow: 0 9px #999;
+
+/* Media query */
+
+@media screen and (max-width: 500px) {
+	.lecture-info
+	{
+		flex-direction: column;
+	}
+
+	.lecture-date {
+		padding-bottom: 2%;
+	}
 }
-  
-.button:hover {
-    background-color:#0e9aa7
-}
-  
-.button:active {
-    background-color: #1b6ca8;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-}
+
