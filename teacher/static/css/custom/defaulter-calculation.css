@@ -18,29 +18,16 @@ input[type=number] {
     display: flex;
 }
 
-.submit-button {
-    display: flex;
-    justify-content: center;
-}
-
-#submit {
-    display: inline-block;
-    width: 16%;
-    padding: 1%;
-    background-color:#1b6ca8;
-    font-weight: bold;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    color: white;
-}
-
-#submit:hover {
-    background-color:#0e9aa7;
+.shadow-button
+{
+	padding: 1%;
+	margin: 1%;
+	font-family: inherit;
+	font-weight: bold;
 }
 
 
-/* Media queries */
+/* Media query */
 
 @media screen and (max-width: 640px) {
     .card {
@@ -65,10 +52,5 @@ input[type=number] {
     input[type=number] {
         width: 50%;
         margin-top: 5%;
-    }
-
-    #submit {
-        width: 40%;
-        padding: 2%;
     }
 }

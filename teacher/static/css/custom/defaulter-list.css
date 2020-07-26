@@ -19,37 +19,6 @@
     padding-right: 5%;
 }
 
-.button {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 1% 1%;
-    margin: 3%;
-    cursor: pointer;
-    font-size: 16px;
-    text-align: center;
-    text-decoration: none;
-    outline: none;
-    color: #fff;
-    background-color:#1b6ca8;
-    border: none;
-    border-radius: 11px;
-    box-shadow: 0 9px #999;
-    width: 150px;
-    height: 30px;
-}
-  
-.button:hover {
-    background-color:#0e9aa7
-}
-  
-.button:active {
-    background-color: #1b6ca8;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-}
-
 
 /* Media queries */
 
@@ -68,7 +37,7 @@
         font-size: 15px;
     }
 
-    .button {
+    .shadow-button {
         font-size: 15px;
         width: 130px;
         height: 25px;

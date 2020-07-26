@@ -38,7 +38,7 @@ h1 {
     padding: 1% 0;
 }
 
-.button {
+.shadow-button {
 	display: flex;
 	align-items: center;
 	padding: 8%;
@@ -53,12 +53,34 @@ h1 {
 	box-shadow: 0 9px #999;
 }
 
-.button:hover {
+.shadow-button:hover {
 	background-color:#0e9aa7
 }
 
-.button:active {
+.shadow-button:active {
 	background-color: #1b6ca8;
 	box-shadow: 0 5px #666;
 	transform: translateY(4px);
+}
+
+.shadowless-button {
+    width: 100%;
+    font-size: 16px;
+    padding: 2%;
+    background-color:#1b6ca8;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    margin-top: 8%;
+    margin-bottom: 8%;
+}
+
+.shadowless-button:hover {
+	background-color:#0e9aa7
+}
+
+.shadowless-button:active {
+	background-color: #1b6ca8;
 }
