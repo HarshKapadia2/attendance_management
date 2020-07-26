@@ -44,3 +44,8 @@ def dashboard():
 def lectures():
   if request.method == 'GET':
     return render_template('student-lectures-page.html')
+
+@student.route('/practicals', methods=['GET'])
+def practicals():
+  if request.method == 'GET':
+    return render_template('student-practicals-page.html')
