@@ -49,3 +49,8 @@ def lectures():
 def practicals():
   if request.method == 'GET':
     return render_template('student-practicals-page.html')
+
+@student.route('/combined', methods=['GET'])
+def combined():
+  if request.method == 'GET':
+    return render_template('student-combined-page.html')

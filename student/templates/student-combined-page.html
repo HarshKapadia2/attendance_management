@@ -1,0 +1,102 @@
+{% extends 'student/base.html' %}
+
+{% block head %}
+	<title>Lectures and Practicals</title>
+
+    <!-- Base CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('student.static', filename='css/templates/base.css') }}">
+    <!-- Navbar CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('student.static', filename='css/templates/navbar.css') }}">
+    <!-- Main section CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('student.static', filename='css/templates/main-section.css') }}">
+    <!-- Table CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('student.static', filename='css/templates/table.css') }}">
+    <!-- Footer CSS -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('student.static', filename='css/templates/footer.css') }}">
+	<!-- Custom CSS for page -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('student.static', filename='css/custom/lectures-page.css') }}">
+	
+	<!-- Burger navbar JS -->
+    <script async src="{{ url_for('student.static', filename='js/navbar-burger.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+<body>
+    <div class="navbar">
+		<h2 class="navbar-title">Attendance Manager</h2>
+
+		<div class="navbar-elements">
+			<form action="/student/dashboard" method="GET">
+                <button class="navbar-buttons long-navbar-buttons">Dashboard</button>
+			</form>
+			
+			<form action="" method="GET">
+                <button class="navbar-buttons">Docs</button>
+			</form>
+			
+			<form action="" method="GET">
+                <button class="navbar-buttons">Log Out</button>
+			</form>
+		</div>
+
+		<div class="burger">
+            <div class="line-1"></div>
+            <div class="line-2"></div>
+            <div class="line-3"></div>
+        </div>
+	</div>
+
+    <div class="main-section">
+        <div class="dashboard-heading">
+            <h1>Student's Lectures and Practicals</h1>
+        </div>
+
+        <div class="card">
+            <h2>Student Details</h2>
+
+            <div class="table-overflow">
+                <table>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Teacher</th>
+                        <th>Sessions Conducted</th>
+                        <th>Sessions Attended</th>
+                        <th>Percentage</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Automata Theory</td>
+                        <td>Kumkum Saxena</td>
+                        <td>26</td>
+                        <td>19</td>
+                        <td>73.07%</td>
+                    </tr>
+
+                    <tr>
+                        <td>Operating System</td>
+                        <td>Shachi Natu</td>
+                        <td>30</td>
+                        <td>26</td>
+                        <td>86.67%</td>
+                    </tr>
+
+                    <tr>
+                        <td>Computer Networks</td>
+                        <td>Vijal Jain</td>
+                        <td>30</td>
+                        <td>26</td>
+                        <td>86.67%</td>
+                    </tr>
+
+                    <tr>
+                        <td>Computer Networks</td>
+                        <td>Vijal Jain</td>
+                        <td>30</td>
+                        <td>26</td>
+                        <td>86.67%</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}
