@@ -21,42 +21,9 @@ app.register_blueprint(admin, url_prefix='/admin')
 
 @app.route('/', methods = ['GET'])
 def home_page():
-    if 'user' not in session:
-        return render_template('home-page.html')
-    else:
-        return redirect('/logout')
-
-
-@app.route('/logout', methods = ['GET'])
-def logout():
-    if 'user' in session:
-        session.pop('user', None)
-        session.pop('person_type', None)
-        session.pop('division', None)
-
-        flash('You have been logged out...', 'warning')
-        return redirect('/')
-    else:
-        return redirect('/')
-
-
-@app.route('/forgot_password', methods = ['GET', 'POST'])
-def forgotPassword():
     if request.method == 'GET':
-        if 'user' not in session:
-            return render_template('forgot_password_page.html')
-        else:
-            return redirect('/logout')
-    elif request.method == 'POST':
-        email = request.form['email']
-        try:
-            auth.send_password_reset_email(email)
-        except:
-            flash('That e-mail ID is not registered...', 'error')
-            return redirect('/')
-        flash('Check your e-mail to set new password...', 'info')
-        return redirect('/')
+        return render_template('home-page.html')
 
 
 if __name__ == '__main__':
-    app.run(debug = True)
+    app.run(debug = True) # No parameters in production
