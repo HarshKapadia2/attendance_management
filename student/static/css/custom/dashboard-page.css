@@ -12,13 +12,6 @@
     flex: 1;
 }
 
-.button {
-    padding: 4% 9%;
-    font-size: 27px;
-    cursor: pointer;
-    color: #fff;
-    background-color:#1b6ca8;
-    border: none;
-    border-radius: 11px;
-    box-shadow: 0 9px #999;
+.shadow-button {
+	font-size: 27px;
 }
