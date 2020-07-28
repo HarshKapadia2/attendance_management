@@ -1,7 +1,7 @@
 {% extends 'student/base.html' %}
 
 {% block head %}
-	<title>Lectures and Practicals</title>
+	<title>Student's Practicals</title>
 
     <!-- Base CSS -->
     <link rel="stylesheet" type="text/css" href="{{ url_for('student.static', filename='css/templates/base.css') }}">
@@ -14,7 +14,7 @@
     <!-- Footer CSS -->
 	<link rel="stylesheet" type="text/css" href="{{ url_for('student.static', filename='css/templates/footer.css') }}">
 	<!-- Custom CSS for page -->
-	<link rel="stylesheet" type="text/css" href="{{ url_for('student.static', filename='css/custom/lectures-page.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('student.static', filename='css/custom/lectures.css') }}">
 	
 	<!-- Burger navbar JS -->
     <script async src="{{ url_for('student.static', filename='js/navbar-burger.js') }}"></script>
@@ -48,7 +48,7 @@
 
     <div class="main-section">
         <div class="dashboard-heading">
-            <h1>Student's Lectures and Practicals</h1>
+            <h1>Student's Practicals</h1>
         </div>
 
         <div class="card">
@@ -58,13 +58,15 @@
                 <table>
                     <tr>
                         <th>Subject</th>
-                        <th>Sessions Conducted</th>
-                        <th>Sessions Attended</th>
+                        <th>Teacher</th>
+                        <th>Practicals Conducted</th>
+                        <th>Practicals Attended</th>
                         <th>Percentage</th>
                     </tr>
                     
                     <tr>
                         <td>Automata Theory</td>
+                        <td>Kumkum Saxena</td>
                         <td>26</td>
                         <td>19</td>
                         <td>73.07%</td>
@@ -72,6 +74,7 @@
 
                     <tr>
                         <td>Operating System</td>
+                        <td>Shachi Natu</td>
                         <td>30</td>
                         <td>26</td>
                         <td>86.67%</td>
@@ -79,6 +82,7 @@
 
                     <tr>
                         <td>Computer Networks</td>
+                        <td>Vijal Jain</td>
                         <td>30</td>
                         <td>26</td>
                         <td>86.67%</td>
@@ -86,6 +90,7 @@
 
                     <tr>
                         <td>Computer Networks</td>
+                        <td>Vijal Jain</td>
                         <td>30</td>
                         <td>26</td>
                         <td>86.67%</td>

@@ -1,7 +1,7 @@
 {% extends 'student/base.html' %}
 
 {% block head %}
-	<title>Student's Practicals</title>
+	<title>Student's Lectures</title>
 
     <!-- Base CSS -->
     <link rel="stylesheet" type="text/css" href="{{ url_for('student.static', filename='css/templates/base.css') }}">
@@ -14,7 +14,7 @@
     <!-- Footer CSS -->
 	<link rel="stylesheet" type="text/css" href="{{ url_for('student.static', filename='css/templates/footer.css') }}">
 	<!-- Custom CSS for page -->
-	<link rel="stylesheet" type="text/css" href="{{ url_for('student.static', filename='css/custom/lectures-page.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('student.static', filename='css/custom/lectures.css') }}">
 	
 	<!-- Burger navbar JS -->
     <script async src="{{ url_for('student.static', filename='js/navbar-burger.js') }}"></script>
@@ -48,7 +48,7 @@
 
     <div class="main-section">
         <div class="dashboard-heading">
-            <h1>Student's Practicals</h1>
+            <h1>Student's Lectures</h1>
         </div>
 
         <div class="card">
@@ -59,8 +59,8 @@
                     <tr>
                         <th>Subject</th>
                         <th>Teacher</th>
-                        <th>Practicals Conducted</th>
-                        <th>Practicals Attended</th>
+                        <th>Lectures Conducted</th>
+                        <th>Lectures Attended</th>
                         <th>Percentage</th>
                     </tr>
                     

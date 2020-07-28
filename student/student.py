@@ -28,12 +28,12 @@ student = Blueprint('student', __name__, static_folder='static', template_folder
 @student.route('/login', methods=['GET'])
 def login():
   if request.method == 'GET':
-    return render_template('student-login-page.html')
+    return render_template('login.html')
 
 @student.route('/signup', methods=['GET'])
 def signup():
   if request.method == 'GET':
-    return render_template('student-signup-page.html')
+    return render_template('signup.html')
 
 @student.route('/forgot_password', methods=['GET'])
 def forgotPassword():
@@ -43,19 +43,19 @@ def forgotPassword():
 @student.route('/dashboard', methods=['GET'])
 def dashboard():
   if request.method == 'GET':
-    return render_template('student-dashboard-page.html')
+    return render_template('dashboard.html')
 
 @student.route('/lectures', methods=['GET'])
 def lectures():
   if request.method == 'GET':
-    return render_template('student-lectures-page.html')
+    return render_template('lectures.html')
 
 @student.route('/practicals', methods=['GET'])
 def practicals():
   if request.method == 'GET':
-    return render_template('student-practicals-page.html')
+    return render_template('practicals.html')
 
-@student.route('/combined', methods=['GET'])
-def combined():
+@student.route('/lectures_and_practicals', methods=['GET'])
+def lecturesAndPracticals():
   if request.method == 'GET':
-    return render_template('student-combined-page.html')
+    return render_template('lectures-and-practicals.html')

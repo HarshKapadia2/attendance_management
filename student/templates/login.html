@@ -1,7 +1,7 @@
 {% extends 'student/base.html' %}
 
 {% block head %}
-	<title>Student Dashboard</title>
+	<title>Student Login</title>
 
 	<!-- Base CSS -->
     <link rel="stylesheet" type="text/css" href="{{ url_for('student.static', filename='css/templates/base.css') }}">
@@ -12,7 +12,7 @@
     <!-- Footer CSS -->
     <link rel="stylesheet" type="text/css" href="{{ url_for('student.static', filename='css/templates/footer.css') }}">
     <!-- Custom CSS for page -->
-	<link rel="stylesheet" type="text/css" href="{{ url_for('student.static', filename='css/custom/dashboard-page.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('student.static', filename='css/custom/login.css') }}">
 
 	<!-- Burger navbar JS -->
     <script async src="{{ url_for('student.static', filename='js/navbar-burger.js') }}"></script>
@@ -20,16 +20,16 @@
 
 {% block body %}
 <body>
-    <div class="navbar">
+	<div class="navbar">
 		<h2 class="navbar-title">Attendance Manager</h2>
 
 		<div class="navbar-elements">
-			<form action="" method="GET">
-                <button class="navbar-buttons">Docs</button>
+			<form action="/" method="GET">
+                <button class="navbar-buttons">Home</button>
 			</form>
 			
 			<form action="" method="GET">
-                <button class="navbar-buttons">Log Out</button>
+                <button class="navbar-buttons">Docs</button>
 			</form>
 		</div>
 
@@ -39,28 +39,31 @@
             <div class="line-3"></div>
         </div>
 	</div>
+	  
+	<div class="main-section">
+		<div class="login-card">
+			<form action="/student/login" method="POST">
+				<h1>Student Login</h1>
 
-    <div class="main-section">
-        <div class="dashboard-heading">
-            <h1>Student's Dashboard</h1>
-        </div>
+				<label for="email" style="text-align: left;">e-mail Address</label>
+				<br>
+				<input id="email" type="email" name="email" required autofocus>
 
-        <div class="card">
-            <h2 class="details">Student Details</h2>
+				<div class="password-div">
+					<label for="password">Password</label>
 
-            <div class="attendance-options">
-                <form action="/student/lectures" method="GET">
-                    <button type="submit" class="shadow-button">Lectures</button>
-                </form>
+					<a href="/forgot_password">Forgot Password?</a>
+				</div>
+				<input id="password" type="password" name="password" required>
 
-                <form action="" method="GET">
-                    <button type="submit" class="shadow-button">Practicals</button>
-                </form>
+				<button class="shadowless-button" type="submit">Log In</button>
 
-                <form action="" method="GET">
-                    <button type="submit" class="shadow-button">Combined</button>
-                </form>
-            </div>
-        </div>
-    </div>
+				<div class="account-div">
+					<label>Don't have an account?</label>
+					&nbsp;
+					<a href="/student/signup">Create One</a>
+				</div>
+			</form>
+		</div>
+	</div>
 {% endblock %}
