@@ -34,3 +34,8 @@ def login():
 def signup():
   if request.method == 'GET':
     return render_template('admin-signup-page.html')
+
+@admin.route('/forgot_password', methods=['GET'])
+def forgotPassword():
+	if request.method == 'GET':
+		return render_template('forgot-password.html')
