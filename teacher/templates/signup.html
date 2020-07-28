@@ -1,7 +1,7 @@
 {% extends 'teacher/base.html' %}
 
 {% block head %}
-	<title>Teacher Login</title>
+	<title>Teacher Signup</title>
 
 	<!-- Base CSS -->
     <link rel="stylesheet" type="text/css" href="{{ url_for('teacher.static', filename='css/templates/base.css') }}">
@@ -12,7 +12,7 @@
     <!-- Footer CSS -->
     <link rel="stylesheet" type="text/css" href="{{ url_for('teacher.static', filename='css/templates/footer.css') }}">
     <!-- Custom CSS for page -->
-	<link rel="stylesheet" type="text/css" href="{{ url_for('teacher.static', filename='css/custom/login-page.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('teacher.static', filename='css/custom/signup.css') }}">
 
 	<!-- Burger navbar JS -->
     <script async src="{{ url_for('teacher.static', filename='js/navbar-burger.js') }}"></script>
@@ -27,9 +27,9 @@
 			<form action="/" method="GET">
                 <button class="navbar-buttons">Home</button>
 			</form>
-			
+
 			<form action="" method="GET">
-                <button class="navbar-buttons">Docs</button>
+				<button class="navbar-buttons">Docs</button>
 			</form>
 		</div>
 
@@ -41,28 +41,24 @@
 	</div>
 	  
 	<div class="main-section">
-		<div class="login-card">
-			<form action="/teacher/login" method="POST">
-				<h1>Teacher Login</h1>
+		<div class="signup-card">
+			<form action="/teacher/signup" method="POST">
+				<h1>Teacher Signup</h1>
 
-				<label for="email" style="text-align: left;">e-mail Address</label>
-				<br>
+				<label for="email">e-mail Address</label>
 				<input id="email" type="email" name="email" required autofocus>
 
 				<div class="password-div">
 					<label for="password">Password</label>
-
-					<a href="/forgot_password">Forgot Password?</a>
 				</div>
 				<input id="password" type="password" name="password" required>
 
-				<button class="shadowless-button" type="submit">Log In</button>
-
-				<div class="account-div">
-					<label>Don't have an account?</label>
-					&nbsp;
-					<a href="/teacher/signup">Create One</a>
+				<div class="password-div">
+					<label for="password">Re-type Password</label>
 				</div>
+				<input id="password1" type="password" name="password" required>
+
+				<button class="shadowless-button" type="submit">Create Account</button>
 			</form>
 		</div>
 	</div>
