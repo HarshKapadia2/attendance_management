@@ -28,12 +28,12 @@ admin = Blueprint('admin', __name__, static_folder='static', template_folder='te
 @admin.route('/login', methods=['GET'])
 def login():
   if request.method == 'GET':
-    return render_template('admin-login-page.html')
+    return render_template('login.html')
 
 @admin.route('/signup', methods=['GET'])
 def signup():
   if request.method == 'GET':
-    return render_template('admin-signup-page.html')
+    return render_template('signup.html')
 
 @admin.route('/forgot_password', methods=['GET'])
 def forgotPassword():
