@@ -35,6 +35,11 @@ def signup():
   if request.method == 'GET':
     return render_template('student-signup-page.html')
 
+@student.route('/forgot_password', methods=['GET'])
+def forgotPassword():
+	if request.method == 'GET':
+		return render_template('forgot-password.html')
+
 @student.route('/dashboard', methods=['GET'])
 def dashboard():
   if request.method == 'GET':
