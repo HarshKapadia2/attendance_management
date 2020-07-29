@@ -1,19 +1,19 @@
 {% extends 'base.html' %}
 
 {% block head %}
-  <title>Attendance Manager</title>
+    <title>Attendance Manager</title>
 
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/home-page.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/custom/home-page.css') }}">
 
-  <!-- Footer CSS -->
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/footer.css') }}">
+    <!-- Footer CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/templates/footer.css') }}">
 {% endblock %}
 
 {% block body %}
   <body>
-    <nav class="navbar">
+    <div class="navbar">
         <h2 class="navbar-title">Attendance Manager</h1>
-    </nav>
+    </div>
 
     <main class="front-section">
         <div class="main-title">
