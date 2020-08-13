@@ -10,12 +10,16 @@
 	font-weight: bold;
 }
 
-.lecture-date, .lecture-time {
+.lecture-date, .lecture-time, .student-select-option {
 	display: flex;
 	align-items: center;
 }
 
 .lecture-date {
+	padding-right: 2%;
+}
+
+.lecture-time {
 	padding-right: 2%;
 }
 
