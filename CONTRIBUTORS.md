@@ -5,6 +5,7 @@
 
 ## Contributors
 - kushal98 (kagrawal61@gmail.com)
+- AlkaDas991 (alkadassai@gmail.com)
 - Add your names here!
 
 ## Authors
