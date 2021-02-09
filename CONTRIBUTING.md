@@ -1,12 +1,12 @@
 # Welcome, contributors! :smiley:
 
-- Please be mindful of the [code of conduct](https://github.com/HarshKapadia2/attendance_management/blob/master/CODE_OF_CONDUCT.md) while interacting or contributing!
+- Please be mindful of the [code of conduct](CODE_OF_CONDUCT.md) while interacting or contributing!
 
 - Do not hesitate to raise an [issue](https://github.com/HarshKapadia2/attendance_management/issues) if you have any problems!
 
 - **Beginner contributors** can find issues to be fixed under the `good first issue` label in the [issues](https://github.com/HarshKapadia2/attendance_management/issues) section.
 
-- If you make a contribution, please do not forget to add your personal details to the [CONTRIBUTORS.md](https://github.com/HarshKapadia2/attendance_management/blob/master/CONTRIBUTORS.md) file!
+- If you make a contribution, please do not forget to add your personal details to the [CONTRIBUTORS.md](CONTRIBUTORS.md) file!
 
 ## Requirements / Dependencies
 - [Python 3](https://www.python.org/) (Enable/add Python to path)
@@ -32,7 +32,7 @@
 - To run the website: `python app.py`.
 - To view running website: default: `localhost:5000` or `127.0.0.1:5000` (will be mentioned in the terminal as well)
 - Make your contribution to the code base!
-- Add your personal details to the [CONTRIBUTORS.md](https://github.com/HarshKapadia2/attendance_management/blob/master/CONTRIBUTORS.md) file.
+- Add your personal details to the [CONTRIBUTORS.md](CONTRIBUTORS.md) file.
 - Push the code to your forked repo.
    - **NOTE** 
       - Please do not commit and upload (push) `key.json`, `firebaseConfig.json` without erasing your personal data from them and please leave the `app.secret_key` blank before committing and pushing.
