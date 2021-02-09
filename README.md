@@ -15,7 +15,7 @@
    <br />
    <b>NOTE: Version 2 of this web app is under development in the 'v2' branch.</b>
    <br />
-   For any suggestion(s) or/and problem(s), please do not hesitate to open an <a href="../../issues">issue</a>!
+   For any suggestion(s) or/and problem(s), please do not hesitate to open an <a href="https://github.com/HarshKapadia2/attendance_management/issues">issue</a>!
 </p>
 
 ---

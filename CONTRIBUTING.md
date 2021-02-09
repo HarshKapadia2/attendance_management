@@ -2,9 +2,9 @@
 
 - Please be mindful of the [code of conduct](CODE_OF_CONDUCT.md) while interacting or contributing!
 
-- Do not hesitate to raise an [issue](../../issues) if you have any problems!
+- Do not hesitate to raise an [issue](https://github.com/HarshKapadia2/attendance_management/issues) if you have any problems!
 
-- **Beginner contributors** can find issues to be fixed under the `good first issue` label in the [issues](../../issues) section.
+- **Beginner contributors** can find issues to be fixed under the `good first issue` label in the [issues](https://github.com/HarshKapadia2/attendance_management/issues) section.
 
 - If you make a contribution, please do not forget to add your personal details to the [CONTRIBUTORS.md](CONTRIBUTORS.md) file!
 
