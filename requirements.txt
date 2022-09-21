@@ -36,7 +36,7 @@ pyasn1-modules==0.2.8
 pycryptodome==3.6.6
 pylint==2.4.4
 Pyrebase==3.0.27
-python-jwt==2.0.1
+python-jwt==3.3.4
 pytz==2019.3
 requests==2.20.0
 requests-toolbelt==0.7.0
